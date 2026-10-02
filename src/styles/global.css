@@ -143,6 +143,26 @@ img {
   border-bottom: calc(2 * var(--rule)) solid var(--gold);
 }
 
+.masthead-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gutter);
+}
+
+.masthead-portrait {
+  flex: none;
+  width: clamp(3.5rem, 2.6rem + 4vw, 5rem);
+  border: 2px solid var(--gold);
+}
+
+/* On the narrowest phones the name needs the full width. */
+@media (max-width: 22.5rem) {
+  .masthead-portrait {
+    display: none;
+  }
+}
+
 .wordmark {
   display: inline-block;
   font-family: var(--display);
@@ -169,7 +189,8 @@ img {
 .wordmark-office {
   display: block;
   margin-top: 0.35rem;
-  font-size: clamp(1.15rem, 0.9rem + 1.3vw, 1.55rem);
+  font-size: clamp(1.05rem, 0.75rem + 1.3vw, 1.55rem);
+  white-space: nowrap;
   font-weight: 600;
   letter-spacing: 0.04em;
 }

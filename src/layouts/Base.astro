@@ -1,7 +1,8 @@
 ---
 import "../styles/global.css";
-import { Font } from "astro:assets";
+import { Font, Image } from "astro:assets";
 import { getCollection } from "astro:content";
+import headshot from "../assets/headshot.jpg";
 import Monogram from "../assets/monogram.svg";
 import Contact from "../components/Contact.astro";
 import { court, jurisdiction, office } from "../office";
@@ -48,18 +49,28 @@ const name_after_monogram = office.justice.slice(1);
     </a>
     <header class="masthead">
       <div class="wrap">
-        <a class="wordmark" href={href("/")}>
-          <span class="visually-hidden">
-            {office.justice}, {office_line}: home
-          </span>
-          <span aria-hidden="true">
-            <span class="wordmark-name">
-              <Monogram class="monogram" />
-              {name_after_monogram}
+        <div class="masthead-top">
+          <a class="wordmark" href={href("/")}>
+            <span class="visually-hidden">
+              {office.justice}, {office_line}: home
             </span>
-            <span class="wordmark-office">{office_line}</span>
-          </span>
-        </a>
+            <span aria-hidden="true">
+              <span class="wordmark-name">
+                <Monogram class="monogram" />
+                {name_after_monogram}
+              </span>
+              <span class="wordmark-office">{office_line}</span>
+            </span>
+          </a>
+          <Image
+            class="masthead-portrait"
+            src={headshot}
+            alt={`Portrait of ${office.justice}`}
+            widths={[80, 160, 240]}
+            sizes="5rem"
+            loading="eager"
+          />
+        </div>
         <nav aria-label="Main">
           <ul>
             {nav.map(({ label, path }) => (

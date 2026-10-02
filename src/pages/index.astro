@@ -22,6 +22,10 @@ const services = (await getCollection("services")).sort(
     {office.ward}, {jurisdiction}. It decides small claims and evictions,
     performs weddings, and notarizes documents.
   </p>
+  <p>
+    Not sure whether you are in Ward 10?{" "}
+    <a href={href("/about/#ward-10")}>See the map of the ward</a>.
+  </p>
   <h2>How can the court help you?</h2>
   <ul class="cards">
     {services.map(({ id, data }) => (
