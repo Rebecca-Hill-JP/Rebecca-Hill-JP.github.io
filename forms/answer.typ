@@ -13,11 +13,11 @@ Mark the statement that applies.
 
 #item[I owe the plaintiff only part of what is claimed. #h(0.6em) #field[I agree that I owe \$]]
 
-#item[I owe the plaintiff what is claimed. I waive any further appearance and delays, and I consent to judgment against me in the amount sought.]
+#item[I owe the plaintiff what is claimed.]
 
 == Your reasons
 
-Explain your answer. Include every objection and defense you intend to rely on.
+Explain your answer.
 
 #lines(6)
 
@@ -36,8 +36,6 @@ Explain your answer. Include every objection and defense you intend to rely on.
 #grid(columns: (1fr, 1fr), field[Telephone], field[Email])
 
 #note[
-  *Send a copy of this answer to the plaintiff.* Regular mail is enough.
-
   *Notice to all parties.* While this case is open, the court will contact you at the address and telephone number you gave. If either changes, tell the court at once.
 ]
 

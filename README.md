@@ -65,6 +65,12 @@ Government GIS layers: ward boundaries, town limits, major roads, and the
 office's address point. Nothing on it is traced by hand. Run `npm run map` if
 the parish changes the boundary.
 
+The layers are copyright St. Tammany Parish Government and St. Tammany Parish
+Communications District No. 1, published "for informational purposes only" and
+"not to be sold for profit". They carry no open license. The map credits both
+and says it is not a survey; written permission from the parish GIS division
+has not been obtained.
+
 ## Law
 
 Every legal statement was written from the statute text on legis.la.gov and
@@ -80,6 +86,18 @@ differ from what is commonly repeated, so do not "correct" them:
 `npm run law` fetches each cited section and checks that the wording in
 `law/claims.toml` is still there. It runs monthly in GitHub Actions. When it
 fails, read the amended text, correct the page, then update the claim.
+
+An independent review on 2026-10-02 checked every legal statement on the site
+and forms against the statute text (`law/review-2026-10-02.md`, which describes
+the site as it was before the corrections). It found none wrong and 13 to
+tighten or drop; all 13 were acted on. The rule applied: where a statement is
+uncertain, leave it out. A resident can ask the office; a wrong statement on a
+court's site does harm.
+
+Two corrections matter most. Saturdays and Sundays do not count in the five-day
+notice to vacate (R.S. 1:55(E)(3)). And the forms no longer ask for anything
+the law does not require: witnesses to a notice, a mailed copy of an answer, a
+consent to judgment.
 
 The Justice of the Peace reviews all legal wording and every form before launch.
 

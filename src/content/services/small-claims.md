@@ -1,6 +1,6 @@
 ---
 title: Small Claims
-summary: The court decides disputes over money or movable property worth $5,000 or less. You may speak for yourself; no lawyer is required.
+summary: The court decides disputes over money or movable property worth $5,000 or less. You may speak for yourself.
 order: 1
 fees:
   - item: Filing a new suit, one defendant
@@ -55,7 +55,7 @@ statutes:
 The court can hear your case when all of these are true:
 
 - **The amount in dispute is $5,000 or less.** Interest, court costs, attorney fees, and penalties do not count toward the limit. Or you are asking for possession or ownership of movable property (things other than land and buildings, such as a vehicle, tools, or furniture) worth $5,000 or less.
-- **The case belongs in Ward 10.** The general rule is that a person is sued where that person lives, and a Louisiana company where its registered office is. Other rules apply to some cases. If you are not sure, ask the office before you file.
+- **The case belongs in Ward 10.** The general rule is that a person is sued where that person is domiciled, which means where the person has a permanent home. Other rules apply to businesses and to some kinds of cases.
 - **The case is a kind this court may hear.**
 
 The court cannot hear, among others:
@@ -85,10 +85,9 @@ Do not ignore the citation. Read it for your deadline or trial date.
 
 - If it gives a trial date, come to court on that date.
 - If it does not, answer within 10 days of the day you were served. You may use the Defendant's Answer form or answer in person.
-- Your answer must include every objection and defense you intend to rely on.
 
 If you do nothing, the court may give judgment against you.
 
 ## Appeal
 
-Either party may appeal. An appeal is a new trial in the parish court or, where there is no parish court, in the district court of the parish. You must file it within 15 days of the date of the judgment, or of the day you were served with notice of the judgment when notice is required. You must also give a copy to the other parties and to this court. For Ward 10, the appeal is filed with the St. Tammany Parish Clerk of Court, 701 North Columbia Street, Covington, for the 22nd Judicial District Court.
+A party who loses may appeal. An appeal is a new trial in the parish court or, where there is no parish court, in the district court of the parish. You must file it within 15 days of the date of the judgment, or of the day you were served with notice of the judgment when notice is required. You must also give a copy to the other parties and to this court. For Ward 10, the appeal is filed with the St. Tammany Parish Clerk of Court, 701 North Columbia Street, Covington, for the 22nd Judicial District Court.

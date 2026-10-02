@@ -39,10 +39,7 @@ phrases = ["territorial jurisdiction of the justice of the peace court"]
 
 [112124]
 cite = "C.C.P. art. 4917"
-phrases = [
-  "No written pleadings shall be required",
-  "all of the exceptions upon which he intends to rely",
-]
+phrases = ["No written pleadings shall be required"]
 
 [112125]
 cite = "C.C.P. art. 4918"
@@ -153,6 +150,16 @@ phrases = [
 cite = "C.C. art. 2728"
 phrases = ["ten calendar days before the end of that month"]
 
+[109793]
+cite = "C.C. art. 2729"
+phrases = ["the notice of termination shall be in writing"]
+
+[74097]
+cite = "R.S. 1:55"
+phrases = [
+  "all Saturdays and Sundays shall be considered as legal holidays for the purposes of Code of Civil Procedure Article 5059",
+]
+
 [77379]
 cite = "R.S. 13:2590"
 phrases = [
@@ -176,6 +183,8 @@ phrases = [
   "inventories, appraisements, or partitions",
   "wills or prenuptial agreements",
   "Draft any documents",
+  "Perform any other function of a notary public",
+  "effecting, transferring, conveying, encumbering, or mortgaging",
   "customary practice",
 ]
 

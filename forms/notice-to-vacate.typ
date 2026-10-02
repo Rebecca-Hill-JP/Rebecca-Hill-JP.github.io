@@ -41,7 +41,7 @@ Should you fail to vacate within this period, court proceedings will be taken im
 
 #field[Mailing address]
 
-#grid(columns: (1fr, 1fr), signature[Witness], signature[Witness])
+#grid(columns: (1fr, 1fr), signature[Witness (optional)], signature[Witness (optional)])
 
 #pagebreak()
 
@@ -60,5 +60,5 @@ Keep this page with a copy of the notice. Do not give it to the tenant or occupa
 #item[Attached to a door of the premises, because the premises are abandoned or closed, or the whereabouts of the tenant or occupant is unknown]
 
 #note[
-  The five days do not include the day of delivery or legal holidays. C.C.P. arts. 4701, 4702, 4703, and 5059.
+  The five days do not include the day of delivery, Saturdays, Sundays, or legal holidays. C.C.P. arts. 4701, 4702, and 5059; R.S. 1:55.
 ]

@@ -31,10 +31,11 @@ The Justice of the Peace **can**:
 
 The Justice of the Peace **cannot**:
 
-- notarize any paper that sells, transfers, or mortgages land or buildings;
+- notarize any paper that transfers, mortgages, or otherwise affects land or buildings;
 - notarize or prepare a will or a prenuptial agreement;
 - prepare inventories, appraisements, or partitions;
-- write your document for you.
+- write your document for you;
+- do any other notarial act that is not on the list above.
 
 For those, see a commissioned notary or a lawyer.
 
