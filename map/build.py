@@ -5,6 +5,7 @@ from the parish's own data, so the map cannot drift from the official boundary.
 """
 
 import math
+import re
 from pathlib import Path
 
 import httpx
@@ -19,11 +20,21 @@ BLEED = 40  # pixels kept beyond the canvas edge, so strokes run off it cleanly
 MILE = 1609.344
 METERS_PER_DEGREE = 111_320
 SCALE_BAR_MILES = 2
-LABEL_INSET = 90  # pixels from the canvas edge inside which a road may be named
+LABEL_WIDTH = (
+    150  # pixels allowed for the longest road label, so none runs off the canvas
+)
+LABEL_HEIGHT = (
+    45  # pixels from the top of the route number to the foot of the local name
+)
+LABEL_EDGE = 20  # pixels kept clear between a road label and the canvas edge
 TOWN_LABEL = (
     -90.0290,
     30.4690,
 )  # (longitude, latitude), chosen by eye inside the town limits
+
+LABEL_CLEARANCE = 40  # pixels kept between one road label and the next
+TOWN_LABEL_WIDTH = 190  # pixels; the town name is centered on its point
+OFFICE_LABEL_WIDTH = 120  # pixels; the office name starts beside its marker
 
 type Point = tuple[float, float]
 
@@ -95,8 +106,75 @@ class Frame:
         return "".join(parts)
 
 
-def road_names(frame: Frame, roads: list[dict], avoid: list[Point]) -> str:
-    """Name each road at its vertex farthest from every other road, so names do not collide."""
+def along(run: list[Point], step: float) -> list[Point]:
+    """Points every `step` pixels along a line, so a long straight edge can be kept clear of."""
+    points = []
+    for (x0, y0), (x1, y1) in zip(run, run[1:]):
+        count = max(1, round(math.dist((x0, y0), (x1, y1)) / step))
+        points.extend(
+            (x0 + (x1 - x0) * i / count, y0 + (y1 - y0) * i / count)
+            for i in range(count)
+        )
+    return points
+
+
+def keep_clear(start: float, end: float, y: float) -> list[Point]:
+    """Points a road label must stay away from so it cannot run into a label from `start` to `end`.
+
+    A road label extends to the right of its anchor, so the zone reaches one label width to the left.
+    """
+    return along([(start - LABEL_WIDTH, y), (end, y)], LABEL_CLEARANCE / 2)
+
+
+def route_number(name: str) -> str | None:
+    """The state route number in a name such as "LA 59" or "HWY 59"."""
+    match = re.fullmatch(r"(?:LA|HWY) (\d+)", name.strip())
+    return match.group(1) if match else None
+
+
+def local_names(frame: Frame, streets: list[dict]) -> list[tuple[str, str, Point]]:
+    """Each state route's local name, at every vertex where the parish records one.
+
+    A state route carries its number in one field and its local name in the other,
+    in either order, and the local name changes along the route (LA 59 is Level
+    Street in town and Range Line Road outside it).
+    """
+    named = []
+    for street in streets:
+        fields = (
+            street["properties"]["STREET"] or "",
+            street["properties"]["ALIAS"] or "",
+        )
+        numbers = [route_number(field) for field in fields]
+        names = [
+            field.strip()
+            for field, number in zip(fields, numbers)
+            if field.strip() and not number
+        ]
+        if any(numbers) and names:
+            number = next(number for number in numbers if number)
+            named.extend(
+                (number, names[0].title(), frame.project(point))
+                for run in rings(street["geometry"])
+                for point in run
+            )
+    return named
+
+
+def road_names(
+    frame: Frame,
+    roads: list[dict],
+    streets: list[dict],
+    avoid: list[Point],
+    ward_box: tuple[float, float, float, float],
+) -> str:
+    """Name each route that enters the ward, at the vertex inside it farthest from other roads and labels.
+
+    The route number comes first and the local name of that stretch sits beneath it,
+    smaller, so the map stays readable at phone width. Both lines sit above the
+    vertex, clear of the road they name.
+    """
+    left, top_edge, right, bottom = ward_box
     vertices: dict[str, list[Point]] = {}
     for road in roads:
         pixels = [
@@ -105,12 +183,14 @@ def road_names(frame: Frame, roads: list[dict], avoid: list[Point]) -> str:
         vertices.setdefault(road["properties"]["NAME"], []).extend(
             (x, y)
             for x, y in pixels
-            if LABEL_INSET <= x <= WIDTH - LABEL_INSET
-            and LABEL_INSET <= y <= frame.height - LABEL_INSET
+            if left <= x <= min(right, WIDTH - LABEL_WIDTH - LABEL_EDGE)
+            and top_edge + LABEL_HEIGHT <= y <= bottom
         )
+    named = local_names(frame, streets)
+    placed = list(avoid)
     labels = []
     for name, own in vertices.items():
-        others = avoid + [
+        others = placed + [
             pixel
             for other, pixels in vertices.items()
             if other != name
@@ -120,8 +200,26 @@ def road_names(frame: Frame, roads: list[dict], avoid: list[Point]) -> str:
             x, y = max(
                 own, key=lambda pixel: min(math.dist(pixel, other) for other in others)
             )
+            number = route_number(name)
+            nearby = [
+                (math.dist((x, y), pixel), local)
+                for route, local, pixel in named
+                if route == number
+            ]
+            local = min(nearby)[1] if nearby else ""
+            line = (
+                f'<tspan class="road-local" x="{x + 8:.0f}" dy="1.15em">{local}</tspan>'
+                if local
+                else ""
+            )
+            top = y - 26 if local else y - 7
             labels.append(
-                f'<text class="road-name" x="{x + 8:.0f}" y="{y - 7:.0f}">{name}</text>'
+                f'<text class="road-name" x="{x + 8:.0f}" y="{top:.0f}">{name}{line}</text>'
+            )
+            placed.extend(
+                (x + offset, top + drop)
+                for offset in range(8, LABEL_WIDTH, LABEL_CLEARANCE)
+                for drop in (0, 19)
             )
     return "".join(labels)
 
@@ -145,6 +243,7 @@ def build() -> str:
     }
     towns = query("City_Limit", **envelope)
     roads = query("Major_Roads", **envelope)
+    streets = query("Roads", where="STN_CLASS = 'SH'", **envelope)
     office = query("Address_Points", where=f"ADDRESS = '{OFFICE_ADDRESS}'")[0]
     office_x, office_y = frame.project(office["geometry"]["coordinates"])
     bar = SCALE_BAR_MILES * MILE * frame.meter
@@ -153,7 +252,22 @@ def build() -> str:
     town_paths = "".join(frame.area(feature["geometry"]) for feature in towns)
     road_paths = "".join(frame.lines(feature["geometry"]) for feature in roads)
     town_x, town_y = frame.project(TOWN_LABEL)
-    road_labels = road_names(frame, roads, [(office_x, office_y), (town_x, town_y)])
+    boundary = along([frame.project(point) for point in outline], LABEL_CLEARANCE / 2)
+    left, top_edge = frame.project((west + MARGIN, north - MARGIN))
+    right, bottom = frame.project((east - MARGIN, south + MARGIN))
+    road_labels = road_names(
+        frame,
+        roads,
+        streets,
+        [
+            *keep_clear(
+                town_x - TOWN_LABEL_WIDTH / 2, town_x + TOWN_LABEL_WIDTH / 2, town_y
+            ),
+            *keep_clear(office_x, office_x + OFFICE_LABEL_WIDTH, office_y),
+            *boundary,
+        ],
+        (left, top_edge, right, bottom),
+    )
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {frame.height}" role="img" aria-labelledby="ward-map-title">
 <title id="ward-map-title">Map of Ward {WARD}, St. Tammany Parish: most of the town of Abita Springs and the area north and east of it, with the court office marked.</title>
 <path class="neighbor" d="{neighbors}"/>

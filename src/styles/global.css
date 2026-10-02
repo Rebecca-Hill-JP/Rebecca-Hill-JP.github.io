@@ -475,6 +475,18 @@ td.amount {
   text-anchor: middle;
 }
 
+.ward-map .road-name {
+  font-weight: 600;
+}
+
+/* The local name sits under the route number, lighter and smaller, so the
+   numbers still read first at a glance. */
+.ward-map .road-local {
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 400;
+}
+
 .contact {
   display: grid;
   grid-template-columns: max-content minmax(0, 1fr);

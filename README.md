@@ -61,9 +61,11 @@ description of Ward 10 (from the parish map).
 ## Ward map
 
 `src/assets/ward-10.svg` is drawn by `map/build.py` from St. Tammany Parish
-Government GIS layers: ward boundaries, town limits, major roads, and the
-office's address point. Nothing on it is traced by hand. Run `npm run map` if
-the parish changes the boundary.
+Government GIS layers: ward boundaries, town limits, major roads, street names,
+and the office's address point. Nothing on it is traced by hand, and no label
+is placed by hand: each state route that enters the ward is named where it is
+farthest from other roads and labels, with the local name of that stretch
+beneath the route number. Run `npm run map` if the parish changes the boundary.
 
 The layers are copyright St. Tammany Parish Government and St. Tammany Parish
 Communications District No. 1, published "for informational purposes only" and
