@@ -1,0 +1,264 @@
+# The statute wording that the site's statements rest on. `npm run law` fetches
+# each section from legis.la.gov and fails if a phrase is no longer there, so an
+# amendment shows up as a failed check instead of a stale page.
+# Table name: the document id in https://legis.la.gov/Legis/Law.aspx?d=<id>.
+
+[112118]
+cite = "C.C.P. art. 4911"
+phrases = [
+  "does not exceed five thousand dollars",
+  "does not include interest, court costs, attorney fees, or penalties",
+]
+
+[112119]
+cite = "C.C.P. art. 4912"
+phrases = [
+  "movable property not exceeding five thousand dollars in value",
+  "regardless of the amount of monthly or yearly rent",
+  "does not exceed five thousand dollars per month",
+  "within its territorial jurisdiction",
+]
+
+[112120]
+cite = "C.C.P. art. 4913"
+phrases = [
+  "title to immovable property",
+  "civil or political rights",
+  "custody, visitation, spousal support, or child support",
+  "A succession",
+  "political corporation is a defendant",
+]
+
+[111929]
+cite = "C.C.P. art. 42"
+phrases = ["parish of his domicile", "where its registered office is located"]
+
+[112123]
+cite = "C.C.P. art. 4916"
+phrases = ["territorial jurisdiction of the justice of the peace court"]
+
+[112124]
+cite = "C.C.P. art. 4917"
+phrases = [
+  "No written pleadings shall be required",
+  "all of the exceptions upon which he intends to rely",
+]
+
+[112125]
+cite = "C.C.P. art. 4918"
+phrases = ["the name and address of all parties", "nature and amount of the claim"]
+
+[112126]
+cite = "C.C.P. art. 4919"
+phrases = [
+  "by certified mail",
+  "year or years in which the indebtedness was contracted or arose",
+  "Describe the movable property and state the value thereof",
+]
+
+[112127]
+cite = "C.C.P. art. 4920"
+phrases = ["within ten days of the service of citation"]
+
+[112128]
+cite = "C.C.P. art. 4921"
+phrases = ["a default judgment in favor of the plaintiff may be rendered"]
+
+[322002]
+cite = "C.C.P. art. 4921.1"
+phrases = [
+  "not more than forty-five days, nor less than ten days",
+  "dismissing the action without prejudice",
+]
+
+[962202]
+cite = "C.C.P. art. 4921.2"
+phrases = [
+  "conduct an informal hearing",
+  "technical rules of evidence are relaxed",
+  "encourage fair settlements",
+]
+
+[112130]
+cite = "C.C.P. art. 4923"
+phrases = ["in writing and signed"]
+
+[112131]
+cite = "C.C.P. art. 4924"
+phrases = [
+  "to the parish court or, if there is no parish court, to the district court",
+  "tried de novo",
+]
+
+[112132]
+cite = "C.C.P. art. 4925"
+phrases = [
+  "within fifteen days from the date of the judgment",
+  "provided to all parties",
+  "provided to the justice of the peace court",
+]
+
+[112073]
+cite = "C.C.P. art. 4701"
+phrases = [
+  "not less than five days from the date of its delivery",
+  "written waiver contained in the lease",
+  "shall be considered as a notice to vacate",
+]
+
+[112074]
+cite = "C.C.P. art. 4702"
+phrases = ["five days from its delivery"]
+
+[112075]
+cite = "C.C.P. art. 4703"
+phrases = ["abandoned or closed", "attached to a door of the premises"]
+
+[112078]
+cite = "C.C.P. art. 4731"
+phrases = ["shall state the grounds upon which eviction is sought"]
+
+[112079]
+cite = "C.C.P. art. 4732"
+phrases = [
+  "not earlier than the third day after service",
+  "fails to answer or to appear at the trial",
+  "render immediately a judgment of eviction",
+]
+
+[112080]
+cite = "C.C.P. art. 4733"
+phrases = ["within twenty-four hours after its rendition"]
+
+[112081]
+cite = "C.C.P. art. 4734"
+phrases = ["in the presence of two witnesses"]
+
+[112082]
+cite = "C.C.P. art. 4735"
+phrases = [
+  "answered the rule under oath",
+  "within twenty-four hours after the rendition",
+  "shall be determined by the court",
+]
+
+[112147]
+cite = "C.C.P. art. 5059"
+phrases = [
+  "from which the period begins to run is not included",
+  "The period is less than seven days",
+]
+
+[109792]
+cite = "C.C. art. 2728"
+phrases = ["ten calendar days before the end of that month"]
+
+[77379]
+cite = "R.S. 13:2590"
+phrases = [
+  "New suit: one hundred thirty dollars, and twenty dollars per additional defendant",
+  "Eviction proceeding: one hundred twenty dollars, and twenty dollars per additional defendant",
+  "Subpoena or subpoena duces tecum: forty dollars",
+  "provide costs in advance",
+  "Articles 5181 through 5188",
+]
+
+[77373]
+cite = "R.S. 13:2586.1"
+phrases = [
+  "within his territorial jurisdiction",
+  "Administer oaths or affirmations",
+  "sworn statements, affidavits, and acknowledgements",
+  "Make protests",
+  "chattel mortgages",
+  "office of motor vehicles",
+  "mortgaging immovable property",
+  "inventories, appraisements, or partitions",
+  "wills or prenuptial agreements",
+  "Draft any documents",
+  "customary practice",
+]
+
+[77377]
+cite = "R.S. 13:2588"
+phrases = ["usual and customary fee"]
+
+[77366]
+cite = "R.S. 13:2582"
+phrases = ["terms of six years", "resident of the ward"]
+
+[77367]
+cite = "R.S. 13:2583"
+phrases = ["one constable for the court of each justice of the peace", "terms of six years"]
+
+[77372]
+cite = "R.S. 13:2586"
+phrases = [
+  "committing magistrates",
+  "bonds to keep the peace",
+  "effectuate service of process",
+  "enforce a judgment of the justice of the peace court",
+]
+
+[106877]
+cite = "R.S. 9:202"
+phrases = ["A state judge or justice of the peace"]
+
+[106887]
+cite = "R.S. 9:203"
+phrases = ["any parish within the same supreme court district"]
+
+[106896]
+cite = "R.S. 9:205"
+phrases = ["until he has received a license"]
+
+[106990]
+cite = "R.S. 9:221"
+phrases = ["The clerk of court, in any other parish"]
+
+[106991]
+cite = "R.S. 9:222"
+phrases = ["may be issued in any parish"]
+
+[106999]
+cite = "R.S. 9:224"
+phrases = ["sworn to and signed by both parties", "social security number"]
+
+[107001]
+cite = "R.S. 9:225"
+phrases = ["birth certificate", "driver's license"]
+
+[107068]
+cite = "R.S. 9:234"
+phrases = ["exact time and date of issuance"]
+
+[107076]
+cite = "R.S. 9:235"
+phrases = ["valid for thirty days"]
+
+[107088]
+cite = "R.S. 9:241"
+phrases = ["until twenty-four hours have elapsed"]
+
+[107089]
+cite = "R.S. 9:242"
+phrases = ["may waive the twenty-four-hour delay", "serious and meritorious reasons"]
+
+[107105]
+cite = "R.S. 9:244"
+phrases = ["two competent witnesses of full age"]
+
+[107116]
+cite = "R.S. 9:245"
+phrases = ["signed by the parties to the marriage and by the witnesses"]
+
+[107123]
+cite = "R.S. 9:253"
+phrases = [
+  "one copy of the marriage certificate to the married parties",
+  "Within ten days after the ceremony",
+]
+
+[111058]
+cite = "C.C. art. 91"
+phrases = ["physically present at the ceremony"]
