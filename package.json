@@ -13,7 +13,8 @@
     "format:check": "prettier --check .",
     "placeholders": "! grep -rnw TODO src forms --exclude-dir=fonts",
     "law": "node law/check.mjs",
-    "map": "uv run --with httpx python map/build.py"
+    "map": "uv run --with httpx --with shapely python -m map",
+    "test": "node --test src/ward-lookup.test.ts"
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "^0.4.2",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "@types/node": "^24.19.1",
     "prettier": "^3.9.9",
     "prettier-plugin-astro": "^1.1.0",
     "smol-toml": "^1.9.0",

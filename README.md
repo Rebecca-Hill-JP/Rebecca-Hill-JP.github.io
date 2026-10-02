@@ -4,20 +4,21 @@ The official website of Rebecca Hill, Justice of the Peace, Ward 10. It tells
 residents what the court does, what it costs, and how to file, and gives them
 printable forms.
 
-Static site: Astro, Markdown, hand-written CSS, no client JavaScript. Forms are
-PDFs built from Typst sources.
+Static site: Astro, Markdown, hand-written CSS. The only client JavaScript is
+the address check on the About page. Forms are PDFs built from Typst sources.
 
 ## Commands
 
-| Command                | Does                                                         |
-| ---------------------- | ------------------------------------------------------------ |
-| `npm run dev`          | Local site with live reload (run `npm run forms` once first) |
-| `npm run build`        | Build the forms, then the site, into `dist/`                 |
-| `npm run check`        | Type-check and validate content against its schemas          |
-| `npm run forms`        | Compile `forms/*.typ` to `public/forms/*.pdf`                |
-| `npm run placeholders` | List every unconfirmed fact; fails while any remains         |
-| `npm run law`          | Confirm the statute wording the site relies on is unchanged  |
-| `npm run map`          | Redraw the Ward 10 map from parish GIS data (needs `uv`)     |
+| Command                | Does                                                              |
+| ---------------------- | ----------------------------------------------------------------- |
+| `npm run dev`          | Local site with live reload (run `npm run forms` once first)      |
+| `npm run build`        | Build the forms, then the site, into `dist/`                      |
+| `npm run check`        | Type-check and validate content against its schemas               |
+| `npm run forms`        | Compile `forms/*.typ` to `public/forms/*.pdf`                     |
+| `npm run placeholders` | List every unconfirmed fact; fails while any remains              |
+| `npm run law`          | Confirm the statute wording the site relies on is unchanged       |
+| `npm run map`          | Redraw the ward map and address list from parish GIS (needs `uv`) |
+| `npm test`             | Test the address search                                           |
 
 Needs Node 24 and Typst 0.14.
 
@@ -66,6 +67,29 @@ and the office's address point. Nothing on it is traced by hand, and no label
 is placed by hand: each state route that enters the ward is named where it is
 farthest from other roads and labels, with the local name of that stretch
 beneath the route number. Run `npm run map` if the parish changes the boundary.
+
+## Address check
+
+The box under the map tells a resident whether an address is in Ward 10. It
+calls no geocoding service. `map/addresses.py` takes the parish's own address
+points, tests each against the ward boundary, and writes
+`src/assets/ward-10-addresses.json`; the page searches that list in the
+browser, so nothing a resident types leaves their device and no outside
+service can change under the site.
+
+- The list holds every address in the ward and within a mile of it, so an
+  address just outside gets "not in Ward 10" instead of "not found".
+- An address within 50 feet of the boundary is not called either way; the page
+  says to call the office. The parish's line strays up to 20 feet from the
+  road it follows, and its address points are not surveyed.
+- An answer is given only for an address on the list. Street names are matched
+  loosely (abbreviations, a misspelling, one wrong word) and a loose match is
+  labeled as such; a house number or route number is never guessed.
+- The build stops if the office's own address does not come out inside the
+  ward.
+
+The list ages as houses are built. Run `npm run map` every few months and
+commit the result; the page shows the date of the records.
 
 The layers are copyright St. Tammany Parish Government and St. Tammany Parish
 Communications District No. 1, published "for informational purposes only" and

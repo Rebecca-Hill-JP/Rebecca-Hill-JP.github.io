@@ -19,6 +19,7 @@ jobs:
       - run: npm ci
       - run: npm run format:check
       - run: npm run check
+      - run: npm test
       - run: npm run build
       - name: Check links
         uses: lycheeverse/lychee-action@v2

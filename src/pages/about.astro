@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import headshot from "../assets/headshot.jpg";
 import WardMap from "../assets/ward-10.svg";
 import ExternalLink from "../components/ExternalLink.astro";
+import WardLookup from "../components/WardLookup.astro";
 import Base from "../layouts/Base.astro";
 import { jurisdiction, office } from "../office";
 import { href } from "../paths";
@@ -90,8 +91,10 @@ const PARISH_MAP =
       Government and St. Tammany Parish Communications District No. 1.
     </figcaption>
   </figure>
+  <WardLookup />
   <p>
-    Not sure whether you live in Ward 10? Search for your address on the{" "}
+    Not sure whether you live in Ward 10? You can also search for your address
+    on the{" "}
     <ExternalLink href={PARISH_MAP}>
       parish map of justice of the peace wards
     </ExternalLink>

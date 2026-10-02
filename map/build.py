@@ -8,12 +8,9 @@ import math
 import re
 from pathlib import Path
 
-import httpx
+from .gis import OFFICE_ADDRESS, WARD, query
 
-GIS = "https://maps.stpgov.org/server/rest/services/Referenced_Layers"
 TARGET = Path("src/assets/ward-10.svg")
-WARD = "10"
-OFFICE_ADDRESS = "71667 LEVESON ST"
 WIDTH = 600
 MARGIN = 0.012  # degrees of context shown around the ward
 BLEED = 40  # pixels kept beyond the canvas edge, so strokes run off it cleanly
@@ -39,16 +36,6 @@ TOWN_LABEL_WIDTH = 190  # pixels; the town name is centered on its point
 OFFICE_LABEL_WIDTH = 120  # pixels; the office name starts beside its marker
 
 type Point = tuple[float, float]
-
-
-def query(layer: str, **params: str) -> list[dict]:
-    """Return the GeoJSON features of one parish layer, in longitude and latitude."""
-    defaults = {"where": "1=1", "outFields": "*", "outSR": "4326", "f": "geojson"}
-    response = httpx.get(
-        f"{GIS}/{layer}/MapServer/0/query", params=defaults | params, timeout=60
-    )
-    response.raise_for_status()
-    return response.json()["features"]
 
 
 def rings(geometry: dict) -> list[list[Point]]:
@@ -311,6 +298,6 @@ def build() -> str:
 """
 
 
-if __name__ == "__main__":
+def write() -> None:
     TARGET.write_text(build())
     print(TARGET, TARGET.stat().st_size, "bytes")

@@ -504,6 +504,61 @@ td.amount {
   font-weight: 400;
 }
 
+.ward-lookup {
+  max-width: 30rem;
+  margin: 0 0 var(--space);
+}
+
+.ward-lookup label {
+  display: block;
+  font-weight: 600;
+}
+
+.ward-lookup p {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.ward-lookup input {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+
+.ward-lookup-note:empty {
+  display: none;
+}
+
+.ward-lookup .ward-lookup-note {
+  margin-top: 0.75rem;
+}
+
+.ward-lookup-results {
+  margin: 0 0 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.ward-lookup-results li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.15rem 1rem;
+  margin: 0;
+  padding-block: 0.5rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+/* Only an address inside the ward is marked in gold; the words carry the answer either way. */
+.ward-lookup-results .inside {
+  padding-inline: 0.5rem;
+  background: var(--gold);
+}
+
 .contact {
   display: grid;
   grid-template-columns: max-content minmax(0, 1fr);
@@ -586,7 +641,8 @@ td.amount {
 
   .skip,
   .masthead nav,
-  .button {
+  .button,
+  .ward-lookup {
     display: none;
   }
 

@@ -1,0 +1,134 @@
+---
+import list from "../assets/ward-10-addresses.json";
+import { office } from "../office";
+
+const example = office.address.street.split(",")[0];
+const as_of = new Date(list.updated).toLocaleDateString("en-US", {
+  dateStyle: "long",
+  timeZone: "UTC",
+});
+---
+
+<!-- Shown by the script below; without it the map and the links around it still answer the question. -->
+<div class="ward-lookup" data-ward={office.ward} hidden>
+  <label for="ward-address">Check an address</label>
+  <p id="ward-address-hint" class="note">
+    Type a house number and street, for example {example}. What you type stays
+    on your device.
+  </p>
+  <input
+    id="ward-address"
+    name="address"
+    type="search"
+    autocomplete="address-line1"
+    spellcheck="false"
+    aria-describedby="ward-address-hint"
+  />
+  <p class="ward-lookup-note"></p>
+  <ul class="ward-lookup-results"></ul>
+  <p class="visually-hidden" role="status"></p>
+  <p class="note">
+    Parish address records as of {as_of}. This shows where an address is, not
+    where to file a case; for that, contact the office.
+  </p>
+</div>
+
+<script>
+  import {
+    index,
+    search,
+    whole,
+    type Entry,
+    type Found,
+    type Side,
+    type Street,
+  } from "../ward-lookup";
+
+  interface Row {
+    label: string;
+    kind: Side | "mixed";
+    verdict: string;
+  }
+
+  const SHOWN = 8;
+  const root = document.querySelector<HTMLElement>(".ward-lookup")!;
+  const input = root.querySelector("input")!;
+  const note = root.querySelector(".ward-lookup-note")!;
+  const results = root.querySelector(".ward-lookup-results")!;
+  const spoken = root.querySelector('[role="status"]')!;
+  const ward = root.dataset.ward;
+  const ADDRESS: Record<Side, string> = {
+    inside: `In ${ward}`,
+    outside: `Not in ${ward}`,
+    edge: "Close to the boundary. Call the office to confirm.",
+  };
+  const STREET: Record<ReturnType<typeof whole>, string> = {
+    inside: `Every address listed is in ${ward}`,
+    outside: `No address listed is in ${ward}`,
+    mixed: `Partly in ${ward}. Add the house number.`,
+  };
+
+  let entries: Promise<Entry[]> | undefined;
+  /* The list is fetched only once someone uses the box. */
+  function load(): Promise<Entry[]> {
+    return (entries ??= import("../assets/ward-10-addresses.json").then(
+      (list) => index(list.default.streets),
+    ));
+  }
+
+  const place = (street: Street) => `${street.name}, ${street.city}`;
+
+  function rows(found: Found): Row[] {
+    return found.addresses.length
+      ? found.addresses.map(({ street, number, side }) => ({
+          label: `${number} ${place(street)}`,
+          kind: side,
+          verdict: ADDRESS[side],
+        }))
+      : found.streets.map((street) => ({
+          label: place(street),
+          kind: whole(street),
+          verdict: STREET[whole(street)],
+        }));
+  }
+
+  function heading(found: Found, count: number): string {
+    const more =
+      count > SHOWN ? ` Showing the first ${SHOWN}; keep typing.` : "";
+    if (!count) {
+      return `No address like that in or near ${ward}. Check the spelling, look at the map, or contact the office.`;
+    }
+    if (found.close) {
+      return `No street is spelled that way. The closest:${more}`;
+    }
+    if (found.number && !found.addresses.length) {
+      return `The parish lists no number ${found.number} on ${count === 1 ? "this street" : "these streets"}.${more}`;
+    }
+    return count === 1 ? "" : `${count} matches.${more}`;
+  }
+
+  function show(found: Found | undefined): void {
+    const all = found ? rows(found) : [];
+    const text = found ? heading(found, all.length) : "";
+    const only = all.length === 1 ? `${all[0].label}: ${all[0].verdict}` : "";
+    note.textContent = text;
+    results.replaceChildren(
+      ...all.slice(0, SHOWN).map(({ label, kind, verdict }) => {
+        const item = document.createElement("li");
+        const strong = document.createElement("strong");
+        strong.textContent = verdict;
+        strong.className = kind;
+        item.append(label, " ", strong);
+        return item;
+      }),
+    );
+    spoken.textContent = [text, only].filter(Boolean).join(" ");
+  }
+
+  input.addEventListener("focus", load, { once: true });
+  input.addEventListener("input", async () => {
+    const loaded = await load();
+    show(input.value.trim() ? search(loaded, input.value) : undefined);
+  });
+  root.hidden = false;
+</script>
