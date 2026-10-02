@@ -16,6 +16,7 @@
     "map": "uv run --with httpx python map/build.py"
   },
   "dependencies": {
+    "@astrojs/markdown-satteri": "^0.4.2",
     "@fontsource-variable/source-serif-4": "^5.3.0",
     "@fontsource/cormorant-sc": "^5.3.0",
     "astro": "^7.3.5"

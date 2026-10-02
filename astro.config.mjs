@@ -1,6 +1,21 @@
+import { satteri } from "@astrojs/markdown-satteri";
 import { defineConfig, fontProviders } from "astro/config";
 
 const FALLBACKS = ["Georgia", "Times New Roman", "serif"];
+
+// Links in Markdown that leave the site open in a new tab, like ExternalLink.astro.
+const externalLinks = {
+  name: "external-links",
+  element: {
+    filter: ["a"],
+    visit(node, ctx) {
+      if (/^https?:/.test(node.properties?.href ?? "")) {
+        ctx.setProperty(node, "target", "_blank");
+        ctx.setProperty(node, "rel", "noopener");
+      }
+    },
+  },
+};
 
 // SITE_URL and BASE_PATH come from the Pages deploy workflow; local builds serve from "/".
 export default defineConfig({
@@ -8,6 +23,7 @@ export default defineConfig({
   base: process.env.BASE_PATH ?? "/",
   trailingSlash: "always",
   build: { inlineStylesheets: "always" },
+  markdown: { processor: satteri({ hastPlugins: [externalLinks] }) },
   // Font files come from the Fontsource packages and are served from this site.
   // Astro derives metric-matched fallbacks, so text does not jump when they load.
   fonts: [

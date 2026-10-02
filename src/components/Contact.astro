@@ -1,5 +1,6 @@
 ---
 import { office, telephone_link } from "../office";
+import ExternalLink from "./ExternalLink.astro";
 
 const { street, city, state, zip } = office.address;
 const locality = `${city}, ${state} ${zip}`;
@@ -15,7 +16,7 @@ const map_url = `https://www.google.com/maps/search/?api=1&query=${map_query}`;
       <br />
       {locality}
     </address>
-    <a href={map_url}>Map and directions</a>
+    <ExternalLink href={map_url}>Map and directions</ExternalLink>
   </dd>
   <dt>Telephone</dt>
   <dd>

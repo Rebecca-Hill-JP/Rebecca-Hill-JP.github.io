@@ -1,6 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection, getEntries, render } from "astro:content";
+import ExternalLink from "../components/ExternalLink.astro";
 import FormList from "../components/FormList.astro";
 import Base from "../layouts/Base.astro";
 import { office } from "../office";
@@ -70,7 +71,7 @@ const { Content } = await render(service);
   <ul class="statutes">
     {statutes.map(({ cite, url }) => (
       <li>
-        <a href={url}>{cite}</a>
+        <ExternalLink href={url}>{cite}</ExternalLink>
       </li>
     ))}
   </ul>

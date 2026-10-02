@@ -94,6 +94,23 @@ a:hover {
   text-decoration-thickness: 0.16em;
 }
 
+/* A link that opens a new tab says so: an arrow for the eye, words for a screen
+   reader. The arrow is painted in the link's own padding, so it cannot wrap onto
+   a line by itself. */
+a[target="_blank"] {
+  padding-right: 0.85em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 1h6v6M9 1 1 9' fill='none' stroke='%23111111' stroke-width='1.6'/%3E%3C/svg%3E")
+    right center / 0.62em no-repeat;
+}
+
+.colophon a[target="_blank"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 1h6v6M9 1 1 9' fill='none' stroke='%23cfb070' stroke-width='1.6'/%3E%3C/svg%3E");
+}
+
+a[target="_blank"]::after {
+  content: "" / " (opens in a new tab)";
+}
+
 :focus-visible {
   outline: 3px solid currentColor;
   outline-offset: 3px;
@@ -591,6 +608,11 @@ td.amount {
   li,
   tr {
     break-inside: avoid;
+  }
+
+  a[target="_blank"] {
+    padding-right: 0;
+    background: none;
   }
 
   main a[href^="http"]::after {

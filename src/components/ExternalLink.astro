@@ -1,0 +1,13 @@
+---
+// A link that leaves the site. It opens in a new tab so the reader keeps their
+// place; global.css adds the arrow and the spoken "opens in a new tab".
+// Prettier is kept off this file: a line break inside the link would underline
+// a stray space.
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a href={href} target="_blank" rel="noopener"><slot /></a>

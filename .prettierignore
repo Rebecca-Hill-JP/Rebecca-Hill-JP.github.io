@@ -5,3 +5,4 @@ package-lock.json
 src/assets/monogram.svg
 law/review-2026-10-02.md
 law/review-forms-2026-10-02.md
+src/components/ExternalLink.astro

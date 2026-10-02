@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import headshot from "../assets/headshot.jpg";
 import WardMap from "../assets/ward-10.svg";
+import ExternalLink from "../components/ExternalLink.astro";
 import Base from "../layouts/Base.astro";
 import { jurisdiction, office } from "../office";
 import { href } from "../paths";
@@ -37,46 +38,48 @@ const PARISH_MAP =
   <p>
     A justice of the peace is a judge elected by the voters of the court's ward
     or district. The term is six years. The justice must live there.{" "}
-    <a href={`${LAW}77366`}>R.S. 13:2582</a>.
+    <ExternalLink href={`${LAW}77366`}>R.S. 13:2582</ExternalLink>.
   </p>
   <p>
     The court is meant to be simple and near at hand. You may state your case in
     your own words, the hearing is informal, and the judge's duty is to find the
     facts and reach a fair decision.{" "}
-    <a href={`${LAW}112124`}>C.C.P. art. 4917</a>;{" "}
-    <a href={`${LAW}962202`}>art. 4921.2</a>.
+    <ExternalLink href={`${LAW}112124`}>C.C.P. art. 4917</ExternalLink>;{" "}
+    <ExternalLink href={`${LAW}962202`}>art. 4921.2</ExternalLink>.
   </p>
   <p>A justice of the peace:</p>
   <ul>
     <li>
       hears <a href={href("/small-claims/")}>civil claims</a> of $5,000 or less.{" "}
-      <a href={`${LAW}112118`}>C.C.P. art. 4911</a>.
+      <ExternalLink href={`${LAW}112118`}>C.C.P. art. 4911</ExternalLink>.
     </li>
     <li>
       hears <a href={href("/evictions/")}>evictions</a>.{" "}
-      <a href={`${LAW}112119`}>C.C.P. art. 4912</a>.
+      <ExternalLink href={`${LAW}112119`}>C.C.P. art. 4912</ExternalLink>.
     </li>
     <li>
       performs <a href={href("/weddings/")}>marriage ceremonies</a>.{" "}
-      <a href={`${LAW}106877`}>R.S. 9:202</a>.
+      <ExternalLink href={`${LAW}106877`}>R.S. 9:202</ExternalLink>.
     </li>
     <li>
       acts as a <a href={href("/notary/")}>notary</a> with limited powers.{" "}
-      <a href={`${LAW}77373`}>R.S. 13:2586.1</a>.
+      <ExternalLink href={`${LAW}77373`}>R.S. 13:2586.1</ExternalLink>.
     </li>
     <li>
       serves as a committing magistrate for the parish, with power to set bail
       in cases that are not capital or necessarily punishable at hard labor, and
-      to require peace bonds. <a href={`${LAW}77372`}>R.S. 13:2586</a>.
+      to require peace bonds.{" "}
+      <ExternalLink href={`${LAW}77372`}>R.S. 13:2586</ExternalLink>.
     </li>
   </ul>
   <h2>The constable</h2>
   <p>
     Each justice of the peace court has one constable, elected by the same
-    voters for the same six-year term. <a href={`${LAW}77367`}>R.S. 13:2583</a>.
-    The constable serves the court's papers and enforces its judgments.{" "}
-    <a href={`${LAW}77372`}>R.S. 13:2586</a>. The constable who serves this
-    court is {office.constable}.
+    voters for the same six-year term.{" "}
+    <ExternalLink href={`${LAW}77367`}>R.S. 13:2583</ExternalLink>. The
+    constable serves the court's papers and enforces its judgments.{" "}
+    <ExternalLink href={`${LAW}77372`}>R.S. 13:2586</ExternalLink>. The
+    constable who serves this court is {office.constable}.
   </p>
   <h2 id="ward-10">Ward 10</h2>
   <p>{office.territory}</p>
@@ -89,7 +92,9 @@ const PARISH_MAP =
   </figure>
   <p>
     Not sure whether you live in Ward 10? Search for your address on the{" "}
-    <a href={PARISH_MAP}>parish map of justice of the peace wards</a>, or{" "}
-    <a href={href("/contact/")}>contact the office</a>.
+    <ExternalLink href={PARISH_MAP}>
+      parish map of justice of the peace wards
+    </ExternalLink>
+    , or <a href={href("/contact/")}>contact the office</a>.
   </p>
 </Base>
