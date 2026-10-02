@@ -152,7 +152,7 @@ img {
 
 .masthead-portrait {
   flex: none;
-  width: clamp(3.75rem, 1.6rem + 8vw, 6.75rem);
+  width: clamp(4rem, 1.7rem + 8.5vw, 7.25rem);
   border: 2px solid var(--gold);
 }
 
@@ -202,6 +202,14 @@ img {
   margin: var(--space) 0 0;
   padding: 0;
   list-style: none;
+}
+
+/* Once the links fit on one row, spread them so the last one ends at the column
+   edge, in line with the portrait above and the text below. */
+@media (min-width: 46rem) {
+  .masthead nav ul {
+    justify-content: space-between;
+  }
 }
 
 .masthead nav a {
