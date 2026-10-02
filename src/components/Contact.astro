@@ -1,0 +1,34 @@
+---
+import { office } from "../office";
+
+const { street, city, state, zip } = office.address;
+const locality = `${city}, ${state} ${zip}`;
+const map_query = encodeURIComponent(`${street}, ${locality}`);
+const map_url = `https://www.google.com/maps/search/?api=1&query=${map_query}`;
+---
+
+<dl class="contact">
+  <dt>Address</dt>
+  <dd>
+    <address>
+      {street}
+      <br />
+      {locality}
+    </address>
+    <a href={map_url}>Map and directions</a>
+  </dd>
+  <dt>Telephone</dt>
+  <dd>
+    <a href={`tel:${office.phone}`}>{office.phone}</a>
+  </dd>
+  <dt>Fax</dt>
+  <dd>{office.fax}</dd>
+  <dt>Email</dt>
+  <dd>
+    <a href={`mailto:${office.email}`}>{office.email}</a>
+  </dd>
+  <dt>Hours</dt>
+  {office.hours.map((line) => (
+    <dd>{line}</dd>
+  ))}
+</dl>

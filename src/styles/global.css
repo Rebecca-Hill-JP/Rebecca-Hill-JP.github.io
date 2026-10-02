@@ -1,0 +1,479 @@
+:root {
+  /* Gold is sampled from the office sign. It passes contrast only on ink, so it
+     is used for type on ink and for rules and fills elsewhere, never for type on paper. */
+  --gold: #cfb070;
+  --ink: #111111;
+  --paper: #faf7f0;
+  --paper-deep: #f1ebdc;
+  --muted: #4d483d;
+
+  /* --display and --body, the two typefaces, are defined by the fonts block in astro.config.mjs. */
+
+  --size-small: 0.9rem;
+  --size-body: clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
+  --size-lede: clamp(1.3rem, 1.15rem + 0.8vw, 1.55rem);
+  --size-h3: clamp(1.45rem, 1.3rem + 0.7vw, 1.7rem);
+  --size-h2: clamp(1.8rem, 1.55rem + 1.2vw, 2.25rem);
+  --size-h1: clamp(2.4rem, 1.9rem + 2.6vw, 3.4rem);
+
+  --measure: 43rem;
+  --gutter: 1.25rem;
+  --space: 1.5rem;
+  --rule: 3px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--body);
+  font-size: 100%;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--ink);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: var(--size-body);
+  background: var(--paper);
+}
+
+.wrap {
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  line-height: 1.1;
+  text-wrap: balance;
+  margin: calc(2 * var(--space)) 0 calc(0.5 * var(--space));
+}
+
+h1 {
+  font-size: var(--size-h1);
+  margin-top: 0;
+}
+
+h2 {
+  font-size: var(--size-h2);
+  padding-top: calc(0.75 * var(--space));
+  border-top: var(--rule) solid var(--gold);
+}
+
+h3 {
+  font-size: var(--size-h3);
+  font-weight: 600;
+}
+
+p,
+ul,
+ol,
+dl,
+table {
+  margin: 0 0 var(--space);
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.16em;
+}
+
+:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip {
+  position: absolute;
+  left: var(--gutter);
+  top: -10rem;
+  padding: 0.5rem 1rem;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.skip:focus {
+  top: 0.5rem;
+}
+
+.masthead,
+.colophon {
+  background: var(--ink);
+  color: var(--gold);
+}
+
+.masthead {
+  padding-block: var(--space) calc(0.5 * var(--space));
+  border-bottom: calc(2 * var(--rule)) solid var(--gold);
+}
+
+.wordmark {
+  display: inline-block;
+  font-family: var(--display);
+  line-height: 1;
+  text-decoration: none;
+}
+
+.wordmark-name {
+  display: flex;
+  align-items: baseline;
+  font-size: clamp(2.1rem, 1.4rem + 3.6vw, 3.25rem);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Proportions follow the sign: the initial stands 1.8 capitals tall on the shared baseline. */
+.monogram {
+  height: 1.14em;
+  width: auto;
+  margin-right: 0.04em;
+  flex: none;
+}
+
+.wordmark-office {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: clamp(1.15rem, 0.9rem + 1.3vw, 1.55rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.masthead nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+  margin: var(--space) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.masthead nav a {
+  display: block;
+  padding-block: 0.5rem;
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  border-bottom: var(--rule) solid transparent;
+}
+
+.masthead nav a:hover,
+.masthead nav a[aria-current="page"] {
+  border-bottom-color: currentColor;
+}
+
+main {
+  padding-block: calc(2 * var(--space)) calc(3 * var(--space));
+}
+
+.lede {
+  font-size: var(--size-lede);
+  line-height: 1.45;
+}
+
+main ul,
+main ol {
+  padding-left: 1.4em;
+}
+
+main li {
+  margin-bottom: 0.5em;
+}
+
+main li > ul,
+main li > ol {
+  margin: 0.5em 0 0;
+}
+
+/* Numbered steps: gold numerals on ink discs. */
+.prose > ol {
+  padding-left: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.prose > ol > li {
+  position: relative;
+  min-height: 2.2em;
+  margin-bottom: var(--space);
+  padding-left: 3.2em;
+  counter-increment: step;
+}
+
+.prose > ol > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -0.15em;
+  display: grid;
+  place-items: center;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--gold);
+  font-weight: 600;
+  font-variant-numeric: lining-nums;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.6rem 0;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--ink);
+}
+
+thead th {
+  font-size: var(--size-small);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom-width: 2px;
+}
+
+tbody th {
+  font-weight: 400;
+  padding-right: 1rem;
+}
+
+td.amount {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums lining-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.note {
+  display: block;
+  color: var(--muted);
+  font-size: var(--size-small);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--ink);
+}
+
+.button:hover {
+  background: var(--ink);
+  color: var(--gold);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: var(--gutter);
+  margin: 0 0 var(--space);
+  padding: 0;
+  list-style: none;
+}
+
+.cards li {
+  margin: 0;
+}
+
+.cards a {
+  display: block;
+  height: 100%;
+  padding: 1.25rem;
+  background: var(--paper-deep);
+  border-top: calc(2 * var(--rule)) solid var(--gold);
+  text-decoration: none;
+}
+
+.cards a:hover,
+.cards a:focus-visible {
+  background: var(--ink);
+  color: var(--gold);
+}
+
+.cards h3 {
+  margin: 0 0 0.4rem;
+}
+
+.cards p {
+  margin: 0;
+}
+
+.portrait {
+  display: grid;
+  grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
+  gap: var(--gutter);
+  align-items: start;
+  margin-bottom: var(--space);
+}
+
+.portrait img {
+  border-bottom: calc(2 * var(--rule)) solid var(--gold);
+}
+
+.portrait > div > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 30rem) {
+  .portrait {
+    grid-template-columns: minmax(0, 14rem);
+  }
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.4rem 1.25rem;
+}
+
+.contact dt {
+  grid-column: 1;
+  font-weight: 600;
+}
+
+.contact dd {
+  grid-column: 2;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.forms {
+  padding: 0;
+  list-style: none;
+}
+
+.forms li {
+  margin: 0;
+  padding-block: var(--space);
+  border-bottom: 1px solid var(--ink);
+}
+
+.forms li:first-child {
+  padding-top: 0;
+}
+
+.forms h3 {
+  margin: 0 0 0.3rem;
+  padding: 0;
+  border: 0;
+  font-size: var(--size-h3);
+  font-weight: 600;
+}
+
+.forms p {
+  margin-bottom: 0.75rem;
+}
+
+.statutes {
+  font-size: var(--size-small);
+}
+
+.colophon {
+  padding-block: calc(2 * var(--space));
+  border-top: calc(2 * var(--rule)) solid var(--gold);
+  font-size: 1.05rem;
+}
+
+.colophon h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.6rem;
+}
+
+.colophon .notice {
+  margin: 0;
+  padding-top: var(--space);
+  border-top: 1px solid var(--gold);
+}
+
+@media print {
+  html,
+  body,
+  .masthead,
+  .colophon {
+    background: none;
+    color: #000;
+  }
+
+  body {
+    font-size: 11pt;
+  }
+
+  .skip,
+  .masthead nav,
+  .button {
+    display: none;
+  }
+
+  .masthead,
+  .colophon {
+    padding-block: 0.5rem;
+    border-color: #000;
+  }
+
+  main {
+    padding-block: 1rem;
+  }
+
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  li,
+  tr {
+    break-inside: avoid;
+  }
+
+  main a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    overflow-wrap: anywhere;
+  }
+}

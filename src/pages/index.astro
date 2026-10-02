@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import headshot from "../assets/headshot.jpg";
+import Contact from "../components/Contact.astro";
+import Base from "../layouts/Base.astro";
+import { court, jurisdiction, office } from "../office";
+import { href } from "../paths";
+
+const services = (await getCollection("services")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+const [introduction] = office.biography;
+---
+
+<Base
+  title="Home"
+  description={`${court}, ${jurisdiction}: small claims, evictions, weddings, and notary services.`}
+>
+  <h1>{court}</h1>
+  <p class="lede">
+    The court of {office.justice}, {office.title}, serves the people of{" "}
+    {office.ward}, {jurisdiction}. It decides small claims and evictions,
+    performs weddings, and notarizes documents.
+  </p>
+  <h2>How can the court help you?</h2>
+  <ul class="cards">
+    {services.map(({ id, data }) => (
+      <li>
+        <a href={href(`/${id}/`)}>
+          <h3>{data.title}</h3>
+          <p>{data.summary}</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p>
+    <a class="button" href={href("/forms/")}>
+      All forms
+    </a>
+  </p>
+  <h2>Hours and location</h2>
+  <Contact />
+  <h2>{office.justice}</h2>
+  <div class="portrait">
+    <Image
+      src={headshot}
+      alt={`${office.justice}, ${office.title}, ${office.ward}`}
+      widths={[176, 352, 528]}
+      sizes="(max-width: 30rem) 14rem, 11rem"
+    />
+    <div>
+      <p>{introduction}</p>
+      <p>
+        <a href={href("/about/")}>About the Justice of the Peace</a>
+      </p>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,29 @@
+# Office facts, stated once. The site and the PDF letterhead both read this file.
+# A placeholder value marks a fact the office has not confirmed yet; the deploy
+# workflow refuses to publish while any remains (npm run placeholders).
+
+[office]
+justice = "Rebecca Hill"
+title = "Justice of the Peace"
+ward = "Ward 10"
+parish = "TODO"
+state = "Louisiana"
+year_elected = "TODO"
+phone = "TODO"
+fax = "TODO"
+email = "TODO"
+hours = ["TODO"]
+hearing_days = "TODO"
+territory = "TODO"
+constable = "TODO"
+constable_phone = "TODO"
+payment_methods = "TODO"
+payable_to = "TODO"
+how_to_file = "TODO"
+biography = ["TODO"]
+
+[office.address]
+street = "TODO"
+city = "TODO"
+state = "LA"
+zip = "TODO"

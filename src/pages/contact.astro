@@ -1,0 +1,36 @@
+---
+import Contact from "../components/Contact.astro";
+import Base from "../layouts/Base.astro";
+import { court, jurisdiction, office } from "../office";
+---
+
+<Base
+  title="Contact"
+  description={`Address, telephone, email, and office hours of the ${court}.`}
+>
+  <h1>Contact</h1>
+  <p class="lede">
+    {court}, {jurisdiction}
+  </p>
+  <Contact />
+  <h2>Before you call</h2>
+  <p>
+    Staff can tell you how the court works, what a filing costs, and when your
+    hearing is. Staff cannot tell you whether to file, what to say, or how your
+    case will come out. Those are questions for a lawyer.
+  </p>
+  <h2>Hearings</h2>
+  <p>{office.hearing_days}</p>
+  <h2>Constable</h2>
+  <p>
+    The Ward 10 constable serves the court's papers and carries out its orders.
+  </p>
+  <dl class="contact">
+    <dt>Constable</dt>
+    <dd>{office.constable}</dd>
+    <dt>Telephone</dt>
+    <dd>
+      <a href={`tel:${office.constable_phone}`}>{office.constable_phone}</a>
+    </dd>
+  </dl>
+</Base>

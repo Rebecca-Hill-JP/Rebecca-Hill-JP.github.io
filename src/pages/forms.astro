@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import FormList from "../components/FormList.astro";
+import Base from "../layouts/Base.astro";
+import { office } from "../office";
+
+const forms = await getCollection("forms");
+---
+
+<Base
+  title="Forms"
+  description="Printable forms for small claims, evictions, and weddings in the Ward 10 Justice of the Peace Court."
+>
+  <h1>Forms</h1>
+  <p class="lede">
+    Print a form and fill it in by hand. The office can also give you a paper
+    copy.
+  </p>
+  <p>
+    You do not have to use these forms. In a justice of the peace court you may
+    state your claim in your own words, in writing or in person. The forms make
+    sure the court gets every fact it needs.
+  </p>
+  <p>How to file: {office.how_to_file}</p>
+  <h2>All forms</h2>
+  <FormList forms={forms} />
+</Base>

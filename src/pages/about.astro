@@ -1,0 +1,84 @@
+---
+import { Image } from "astro:assets";
+import headshot from "../assets/headshot.jpg";
+import Base from "../layouts/Base.astro";
+import { jurisdiction, office } from "../office";
+import { href } from "../paths";
+
+const LAW = "https://legis.la.gov/Legis/Law.aspx?d=";
+---
+
+<Base
+  title="About"
+  description={`${office.justice}, ${office.title}, ${office.ward}, ${jurisdiction}, and what a justice of the peace does.`}
+>
+  <h1>{office.justice}</h1>
+  <p class="lede">
+    {office.title}, {office.ward}, {jurisdiction}
+  </p>
+  <div class="portrait">
+    <Image
+      src={headshot}
+      alt={`${office.justice}, ${office.title}, ${office.ward}`}
+      widths={[176, 352, 528]}
+      sizes="(max-width: 30rem) 14rem, 11rem"
+    />
+    <div>
+      {office.biography.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))}
+      <p>First elected: {office.year_elected}</p>
+    </div>
+  </div>
+  <h2>What is a justice of the peace?</h2>
+  <p>
+    A justice of the peace is a judge elected by the voters of a ward. The term
+    is six years. The justice must live in the ward.{" "}
+    <a href={`${LAW}77366`}>R.S. 13:2582</a>.
+  </p>
+  <p>
+    The court is meant to be simple and near at hand. You may state your case in
+    your own words, the hearing is informal, and the judge's duty is to find the
+    facts and reach a fair decision.{" "}
+    <a href={`${LAW}112124`}>C.C.P. art. 4917</a>;{" "}
+    <a href={`${LAW}962202`}>art. 4921.2</a>.
+  </p>
+  <p>A justice of the peace:</p>
+  <ul>
+    <li>
+      decides <a href={href("/small-claims/")}>civil claims</a> of $5,000 or
+      less. <a href={`${LAW}112118`}>C.C.P. art. 4911</a>.
+    </li>
+    <li>
+      decides <a href={href("/evictions/")}>evictions</a>.{" "}
+      <a href={`${LAW}112119`}>C.C.P. art. 4912</a>.
+    </li>
+    <li>
+      performs <a href={href("/weddings/")}>marriage ceremonies</a>.{" "}
+      <a href={`${LAW}106877`}>R.S. 9:202</a>.
+    </li>
+    <li>
+      acts as a <a href={href("/notary/")}>notary</a> with limited powers.{" "}
+      <a href={`${LAW}77373`}>R.S. 13:2586.1</a>.
+    </li>
+    <li>
+      serves as a committing magistrate for the parish, with power to set bail
+      in cases that are not capital or necessarily punishable at hard labor, and
+      to require peace bonds. <a href={`${LAW}77372`}>R.S. 13:2586</a>.
+    </li>
+  </ul>
+  <h2>The constable</h2>
+  <p>
+    Each justice of the peace court has one constable, elected by the same
+    voters for the same six-year term. <a href={`${LAW}77367`}>R.S. 13:2583</a>.
+    The constable serves the court's papers and enforces its judgments.{" "}
+    <a href={`${LAW}77372`}>R.S. 13:2586</a>. The Ward 10 constable is{" "}
+    {office.constable}.
+  </p>
+  <h2>Ward 10</h2>
+  <p>{office.territory}</p>
+  <p>
+    Not sure whether you live in Ward 10?{" "}
+    <a href={href("/contact/")}>Contact the office</a>.
+  </p>
+</Base>

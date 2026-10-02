@@ -1,0 +1,97 @@
+---
+import "../styles/global.css";
+import { Font } from "astro:assets";
+import { getCollection } from "astro:content";
+import Monogram from "../assets/monogram.svg";
+import Contact from "../components/Contact.astro";
+import { court, jurisdiction, office } from "../office";
+import { href } from "../paths";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const services = await getCollection("services");
+const nav = [
+  ...services
+    .sort((a, b) => a.data.order - b.data.order)
+    .map((service) => ({
+      label: service.data.title,
+      path: `/${service.id}/`,
+    })),
+  { label: "Forms", path: "/forms/" },
+  { label: "About", path: "/about/" },
+  { label: "Contact", path: "/contact/" },
+];
+const office_line = `${office.title}, ${office.ward}`;
+// The monogram is the initial letter of the name, so the live text starts at the second letter.
+const name_after_monogram = office.justice.slice(1);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{`${title} | ${office.justice}, ${office_line}`}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#111111" />
+    <Font cssVariable="--display" preload />
+    <Font cssVariable="--body" preload />
+    <link rel="icon" type="image/svg+xml" href={href("/favicon.svg")} />
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      Skip to main content
+    </a>
+    <header class="masthead">
+      <div class="wrap">
+        <a class="wordmark" href={href("/")}>
+          <span class="visually-hidden">
+            {office.justice}, {office_line}: home
+          </span>
+          <span aria-hidden="true">
+            <span class="wordmark-name">
+              <Monogram class="monogram" />
+              {name_after_monogram}
+            </span>
+            <span class="wordmark-office">{office_line}</span>
+          </span>
+        </a>
+        <nav aria-label="Main">
+          <ul>
+            {nav.map(({ label, path }) => (
+              <li>
+                <a
+                  href={href(path)}
+                  aria-current={
+                    Astro.url.pathname === href(path) ? "page" : undefined
+                  }
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <slot />
+    </main>
+    <footer class="colophon">
+      <div class="wrap">
+        <h2>{court}</h2>
+        <p>{jurisdiction}</p>
+        <Contact />
+        <p class="notice">
+          <strong>Court staff cannot give legal advice.</strong> This site
+          explains how the court works. It does not replace the law or the
+          advice of a lawyer.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

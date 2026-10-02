@@ -1,0 +1,81 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, getEntries, render } from "astro:content";
+import FormList from "../components/FormList.astro";
+import Base from "../layouts/Base.astro";
+import { office } from "../office";
+import { href } from "../paths";
+
+export const getStaticPaths = (async () => {
+  const services = await getCollection("services");
+  return services.map((service) => ({
+    params: { service: service.id },
+    props: { service },
+  }));
+}) satisfies GetStaticPaths;
+
+const { service } = Astro.props;
+const { title, summary, fees, bring, statutes } = service.data;
+const forms = await getEntries(service.data.forms);
+const { Content } = await render(service);
+---
+
+<Base title={title} description={summary}>
+  <h1>{title}</h1>
+  <p class="lede">{summary}</p>
+  <div class="prose">
+    <Content />
+  </div>
+  <h2>What it costs</h2>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Service</th>
+        <th scope="col">Fee</th>
+      </tr>
+    </thead>
+    <tbody>
+      {fees.map(({ item, amount, note }) => (
+        <tr>
+          <th scope="row">
+            {item}
+            {note && <span class="note">{note}</span>}
+          </th>
+          <td class="amount">{amount}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  <p>
+    Payment: {office.payment_methods}. Make payment to {office.payable_to}.
+  </p>
+  <h2>What to bring</h2>
+  <ul>
+    {bring.map((item) => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  {forms.length > 0 && (
+    <>
+      <h2>Forms</h2>
+      <FormList forms={forms} />
+    </>
+  )}
+  <h2>The law</h2>
+  <p>
+    This page is a summary. The law itself controls. Read it on the Louisiana
+    Legislature's website:
+  </p>
+  <ul class="statutes">
+    {statutes.map(({ cite, url }) => (
+      <li>
+        <a href={url}>{cite}</a>
+      </li>
+    ))}
+  </ul>
+  <p>
+    Questions about your own situation are questions for a lawyer. For questions
+    about the court's procedures,{" "}
+    <a href={href("/contact/")}>contact the office</a>.
+  </p>
+</Base>

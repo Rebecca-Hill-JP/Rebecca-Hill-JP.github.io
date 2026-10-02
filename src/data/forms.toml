@@ -1,0 +1,27 @@
+# One table per form. The table name is the form id: forms/<id>.typ builds to
+# /forms/<id>.pdf. Field-by-field sources are in forms/SOURCES.md.
+
+[civil-claim]
+title = "Statement of Claim"
+purpose = "Start a small claims case for money or movable property worth $5,000 or less."
+revised = 2026-10-02
+
+[answer]
+title = "Defendant's Answer"
+purpose = "Answer a claim that has been filed against you."
+revised = 2026-10-02
+
+[notice-to-vacate]
+title = "Notice to Vacate"
+purpose = "A landlord or owner gives this written notice to a tenant or occupant before filing an eviction. It is delivered to the tenant, not filed with the court."
+revised = 2026-10-02
+
+[eviction-petition]
+title = "Petition of Eviction"
+purpose = "Ask the court to order a tenant or occupant to leave, after the notice to vacate has run out."
+revised = 2026-10-02
+
+[wedding-request]
+title = "Wedding Request"
+purpose = "Ask the Justice of the Peace to perform your marriage ceremony."
+revised = 2026-10-02

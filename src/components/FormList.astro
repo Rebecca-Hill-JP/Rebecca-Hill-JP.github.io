@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { href } from "../paths";
+
+interface Props {
+  forms: CollectionEntry<"forms">[];
+}
+
+const { forms } = Astro.props;
+const long_date = new Intl.DateTimeFormat("en-US", {
+  dateStyle: "long",
+  timeZone: "UTC",
+});
+---
+
+<ul class="forms">
+  {forms.map(({ id, data }) => (
+    <li>
+      <h3>{data.title}</h3>
+      <p>{data.purpose}</p>
+      <a class="button" href={href(`/forms/${id}.pdf`)}>
+        Open {data.title} (PDF)
+      </a>
+      <span class="note">Revised {long_date.format(data.revised)}</span>
+    </li>
+  ))}
+</ul>
