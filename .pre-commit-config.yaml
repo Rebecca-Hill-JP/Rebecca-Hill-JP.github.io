@@ -1,0 +1,20 @@
+repos:
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier
+        entry: npx prettier --check --ignore-unknown
+        language: system
+        files: \.(astro|ts|mjs|css|md|json|ya?ml)$
+      - id: astro-check
+        name: astro check
+        entry: npm run check
+        language: system
+        pass_filenames: false
+        files: ^src/
+      - id: forms
+        name: build forms
+        entry: npm run forms
+        language: system
+        pass_filenames: false
+        files: ^(forms/|src/data/|src/assets/monogram\.svg)

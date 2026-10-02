@@ -1,0 +1,5 @@
+dist/
+.astro/
+public/forms/
+package-lock.json
+src/assets/monogram.svg
