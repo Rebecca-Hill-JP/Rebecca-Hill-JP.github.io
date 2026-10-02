@@ -25,3 +25,18 @@ revised = 2026-10-02
 title = "Wedding Request"
 purpose = "Ask the Justice of the Peace to perform your marriage ceremony."
 revised = 2026-10-02
+
+[delay-waiver]
+title = "Waiver of the 24-Hour Delay"
+purpose = "Ask the Justice of the Peace to allow a marriage ceremony less than 24 hours after the license is issued."
+revised = 2026-10-02
+
+[birth-certificate-waiver]
+title = "Waiver of Birth Certificate"
+purpose = "Ask the court to order that a marriage license be issued when no birth certificate is on file for an applicant born in the United States."
+revised = 2026-10-02
+
+[ownership-judgment]
+title = "Judgment of Ownership of a Vehicle"
+purpose = "Start a suit over the ownership of a vehicle worth $5,000 or less."
+revised = 2026-10-02

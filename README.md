@@ -99,6 +99,15 @@ notice to vacate (R.S. 1:55(E)(3)). And the forms no longer ask for anything
 the law does not require: witnesses to a notice, a mailed copy of an answer, a
 consent to judgment.
 
+A second review the same day covered the two marriage waivers and the vehicle
+judgment (`law/review-forms-2026-10-02.md`). The waivers needed only wording
+changes. The vehicle form was rebuilt: the Attorney General's sample has the
+justice render judgment on the applicant's affidavit alone, and the review
+found that the Code requires a suit, with a defendant who is served
+(C.C.P. arts. 1201, 4912, 4913). The form now names the owner of record as
+defendant and the judgment recites service and the hearing. This is a choice
+about how the court handles these cases, so it is hers to confirm.
+
 The Justice of the Peace reviews all legal wording and every form before launch.
 
 ## Forms

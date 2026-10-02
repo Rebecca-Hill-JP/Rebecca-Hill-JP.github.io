@@ -19,6 +19,7 @@ bring:
 forms:
   - civil-claim
   - answer
+  - ownership-judgment
 statutes:
   - cite: C.C.P. art. 4911, amount in dispute
     url: https://legis.la.gov/Legis/Law.aspx?d=112118
@@ -30,6 +31,8 @@ statutes:
     url: https://legis.la.gov/Legis/Law.aspx?d=112123
   - cite: C.C.P. art. 42, general rules of venue
     url: https://legis.la.gov/Legis/Law.aspx?d=111929
+  - cite: C.C.P. art. 1201, citation and service
+    url: https://legis.la.gov/Legis/Law.aspx?d=111147
   - cite: C.C.P. art. 4917, pleadings
     url: https://legis.la.gov/Legis/Law.aspx?d=112124
   - cite: C.C.P. art. 4919, citation and service
@@ -78,6 +81,10 @@ The full list is in C.C.P. art. 4913.
 6. **The court gives judgment.** The judgment is in writing and signed. If a defendant who was served does not answer or appear, the court may give a default judgment for what the plaintiff proves is owed. If the plaintiff does not appear at a trial date set in the citation, the court may dismiss the case.
 
 A judgment says who owes what. It does not collect the money. If the other party does not pay, ask the office what steps the court can take.
+
+## Ownership of a vehicle
+
+The court can hear a suit over the ownership of a vehicle worth $5,000 or less. The owner of record, or the person the vehicle was acquired from, is named as the defendant and is notified before the court decides. The Office of Motor Vehicles recognizes a judgment of ownership, but it sets its own requirements for issuing a title, and a judgment does not guarantee one. Start with the Judgment of Ownership of a Vehicle form.
 
 ## If you have been sued
 

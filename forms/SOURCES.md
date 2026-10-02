@@ -155,8 +155,75 @@ scheduling form, not a legal document. The facts it states come from statute:
 | Parish of issue, date and time issued | R.S. 9:234, time and date on the face of the license |
 | Two adult witnesses                   | R.S. 9:244, "two competent witnesses of full age"    |
 
+## Waiver of the 24-Hour Delay (`delay-waiver.typ`)
+
+No baseline form. The Attorney General's index has no marriage forms. Built
+from the statute and checked by the independent review of 2026-10-02
+(`law/review-forms-2026-10-02.md`).
+
+| Our text or field                                                   | Law                                                                                     |
+| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| No ceremony until 24 hours after the license is issued              | R.S. 9:241                                                                              |
+| Application of the parties, with their reasons                      | R.S. 9:242(A), "upon application of the parties giving serious and meritorious reasons" |
+| Certificate waiving the delay and authorizing immediate performance | R.S. 9:242(A), "His certificate authorizing the immediate performance of the ceremony"  |
+| "This certificate must be attached to the marriage license"         | R.S. 9:242(A), same words                                                               |
+
+The certificate names the couple so it still identifies them once attached to
+the license. It does not recite that the justice is authorized to perform the
+marriage; the review found that recital true but not required.
+
+## Waiver of Birth Certificate (`birth-certificate-waiver.typ`)
+
+No baseline form. Built from the statute and checked by the same review.
+
+| Our text or field                                                    | Law                                                                                            |
+| -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Applicant born in a state or territory of the United States          | R.S. 9:228(B), "born in any state or territory of the United States"                           |
+| Letter from the registration authority that no record was found      | R.S. 9:227(A)                                                                                  |
+| Other proof of the facts of birth                                    | R.S. 9:227(C), "shall demand other proof of birth facts"                                       |
+| Order: extenuating circumstances, good cause, after a hearing        | R.S. 9:228(B)                                                                                  |
+| Order: finding that the parties complied with all other requirements | R.S. 9:228(B)                                                                                  |
+| Order directed to the official who issues licenses in the parish     | R.S. 9:228(B), "an issuing official within the parish where his court is situated"; R.S. 9:221 |
+| "This order must be attached to the marriage application"            | R.S. 9:228(B)                                                                                  |
+
+The order is on its own page under the letterhead so it can be attached to the
+license application. The law gives no power to waive the birth certificate of
+an applicant born outside the United States (R.S. 9:226(C)); the form says
+nothing about that case.
+
+## Judgment of Ownership of a Vehicle (`ownership-judgment.typ`)
+
+Baselines: the Attorney General's "Court Order" and "Affidavit of Applicant"
+(JCM p. 234 and the forms index), and Office of Motor Vehicles Policy 3.00,
+"Justice of the Peace Court Orders" (revised 2024-06-17).
+
+| Our field                                                                            | AG sample                              | OMV Policy 3.00                                                       | Law                                    |
+| ------------------------------------------------------------------------------------ | -------------------------------------- | --------------------------------------------------------------------- | -------------------------------------- |
+| Plaintiff name, address                                                              | "Applicant"; current owner and address | name of person awarded ownership                                      | art. 4912(A)(1), "suits"               |
+| Defendant: owner of record, or the seller                                            |                                        | adversarial proceedings "must be against the owner of record"         | art. 1201(A), citation essential       |
+| Year, make, model, VIN                                                               | same                                   | same                                                                  | art. 4919(C)(2), describe the property |
+| Value; where the vehicle is kept                                                     |                                        | value under $5,000, with facts if a guide says more                   | art. 4912(A)(1), value and territory   |
+| Date acquired; consideration                                                         | date of sale; price                    | same                                                                  |                                        |
+| Seller and last known address                                                        | same                                   | same                                                                  |                                        |
+| How acquired, and why title papers are unavailable                                   | "Nature of Acquisition"                | same                                                                  |                                        |
+| Attachments: bill of sale, title or registration, inspection affidavit, lien release |                                        | same                                                                  |                                        |
+| Oath before the Justice of the Peace                                                 | "Sworn to and subscribed before me"    |                                                                       | R.S. 13:2586.1(A)(1), (E)              |
+| Judgment: service, appearance or default, hearing date                               |                                        | "proof of the proceedings"                                            | arts. 1201, 4920, 4921, 4921.1         |
+| Judgment: lien findings as tick boxes                                                | "the vehicle is lien free"             | "must state that the vehicle is lien free", or a satisfaction of lien | R.S. 32:712                            |
+| Judgment on letterhead, signed and dated                                             | letterhead block                       | "on letterhead"                                                       | art. 4923                              |
+
+A deliberate departure from the Attorney General's sample. The sample has the
+justice "upon receipt of proper documents and attached affidavit ... render
+Judgment", with no defendant. The independent review found no support for that
+in the Code: art. 4912 gives jurisdiction over "suits", art. 1201(A) makes
+citation and service essential ("Without them all proceedings are absolutely
+null"), and art. 4913(B)(9) denies jurisdiction over in rem proceedings. The
+form is therefore a suit against the owner of record, and the judgment recites
+service and the hearing. The Justice of the Peace decides whether to follow
+the sample instead.
+
 ## Court papers not published
 
-Citation, judgments, order to show cause, warrant for possession, and returns
-are issued by the court and are not on the site. The Attorney General baseline
+Citation, other judgments, order to show cause, warrant for possession, and
+returns are issued by the court and are not on the site. The Attorney General baseline
 has them as forms 05, 07, 11 to 15, and 44 to 48.

@@ -14,6 +14,8 @@ bring:
   - The ceremony fee.
 forms:
   - wedding-request
+  - delay-waiver
+  - birth-certificate-waiver
 statutes:
   - cite: R.S. 9:202, who may perform a marriage ceremony
     url: https://legis.la.gov/Legis/Law.aspx?d=106877
@@ -29,6 +31,10 @@ statutes:
     url: https://legis.la.gov/Legis/Law.aspx?d=106999
   - cite: R.S. 9:225, documents required for the license
     url: https://legis.la.gov/Legis/Law.aspx?d=107001
+  - cite: R.S. 9:227, when no birth certificate is on file
+    url: https://legis.la.gov/Legis/Law.aspx?d=107030
+  - cite: R.S. 9:228, court order waiving the birth certificate
+    url: https://legis.la.gov/Legis/Law.aspx?d=107040
   - cite: R.S. 9:235, license valid for thirty days
     url: https://legis.la.gov/Legis/Law.aspx?d=107076
   - cite: R.S. 9:241, twenty-four-hour delay
@@ -55,8 +61,8 @@ The court does not issue marriage licenses. The clerk of court does.
 
 ## What do I do?
 
-1. **Get a marriage license.** Apply to a clerk of court. A license from any Louisiana parish is good for a ceremony anywhere in the state. Each of you signs the application under oath. The clerk will ask for a certified copy of each birth certificate, identification such as a driver's license or passport, and your Social Security numbers. Ask the clerk about its fee and about anything you do not have.
-2. **Wait 24 hours.** The ceremony cannot take place until 24 hours after the license is issued. For serious reasons, the Justice of the Peace may waive the wait. Ask the office.
+1. **Get a marriage license.** Apply to a clerk of court. A license from any Louisiana parish is good for a ceremony anywhere in the state. Each of you signs the application under oath. The clerk will ask for a certified copy of each birth certificate, identification such as a driver's license or passport, and your Social Security numbers. Ask the clerk about its fee and about anything you do not have. If you were born in the United States and no birth certificate is on file for you, the law provides a way to ask a court to order the license issued without one; see the Waiver of Birth Certificate form.
+2. **Wait 24 hours.** The ceremony cannot take place until 24 hours after the license is issued. For serious and meritorious reasons, the Justice of the Peace may waive the wait; see the Waiver of the 24-Hour Delay form.
 3. **Marry within 30 days.** The license expires 30 days after it is issued.
 4. **Arrange the ceremony.** Call, text, or email the office, or send the Wedding Request form, to choose a date and time.
 5. **Come to the ceremony.** Both of you must be present in person, with two witnesses of full age. Bring the license. The ceremony cannot be performed without it.

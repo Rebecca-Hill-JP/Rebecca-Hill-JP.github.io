@@ -17,6 +17,7 @@ phrases = [
   "regardless of the amount of monthly or yearly rent",
   "does not exceed five thousand dollars per month",
   "within its territorial jurisdiction",
+  "A judgment of ownership of a vehicle ordered by a justice of the peace court shall be recognized by the office of motor vehicles",
 ]
 
 [112120]
@@ -27,6 +28,13 @@ phrases = [
   "custody, visitation, spousal support, or child support",
   "A succession",
   "political corporation is a defendant",
+]
+
+[111147]
+cite = "C.C.P. art. 1201"
+phrases = [
+  "Citation and service thereof are essential in all civil actions",
+  "Without them all proceedings are absolutely null",
 ]
 
 [111929]
@@ -237,6 +245,23 @@ phrases = ["sworn to and signed by both parties", "social security number"]
 cite = "R.S. 9:225"
 phrases = ["birth certificate", "driver's license"]
 
+[107030]
+cite = "R.S. 9:227"
+phrases = [
+  "If no birth certificate is on file for an applicant",
+  "under his raised seal or stamp",
+  "a thorough search was made and that no birth record was located",
+]
+
+[107040]
+cite = "R.S. 9:228"
+phrases = [
+  "a justice of the peace or city court judge may order an issuing official within the parish where his court is situated to issue a marriage license without the applicant submitting a birth certificate",
+  "In the event of extenuating circumstances, and for good cause shown, and after a hearing",
+  "other competent evidence that the applicant was born in any state or territory of the United States",
+  "The written order shall be attached to the marriage application",
+]
+
 [107068]
 cite = "R.S. 9:234"
 phrases = ["exact time and date of issuance"]
@@ -251,7 +276,11 @@ phrases = ["until twenty-four hours have elapsed"]
 
 [107089]
 cite = "R.S. 9:242"
-phrases = ["may waive the twenty-four-hour delay", "serious and meritorious reasons"]
+phrases = [
+  "may waive the twenty-four-hour delay",
+  "upon application of the parties giving serious and meritorious reasons",
+  "His certificate authorizing the immediate performance of the ceremony must be attached to the marriage license",
+]
 
 [107105]
 cite = "R.S. 9:244"

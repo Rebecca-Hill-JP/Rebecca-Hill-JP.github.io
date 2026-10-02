@@ -64,6 +64,21 @@
   #body
 ]
 
+// The part of a form that only the Justice of the Peace completes and signs.
+#let court-part(title, body) = block(
+  breakable: false,
+  width: 100%,
+  inset: 12pt,
+  stroke: 0.8pt,
+)[
+  #text(font: DISPLAY, weight: 700, size: 14.5pt, title)
+
+  #body
+]
+
+// Where the Justice of the Peace signs.
+#let justice-signature = signature[#office.justice, #office.title \ #office.ward, #venue]
+
 // Parties on the left, court and case number on the right, as on a court caption.
 #let caption(first: "Plaintiff(s)", second: "Defendant(s)") = grid(
   columns: (1fr, 1fr),
@@ -113,6 +128,19 @@
   #v(-0.4em)
   #pdf.artifact(line(length: 100%, stroke: 2pt + GOLD))
 ]
+
+// A paper the court issues, on its own page under the letterhead, so it can stand
+// alone when it is attached to another document.
+#let order-page(title) = {
+  pagebreak()
+  letterhead
+  grid(
+    columns: (1fr, auto),
+    align: (left + horizon, right + horizon),
+    text(font: DISPLAY, weight: 700, size: 24pt, title),
+    box(width: 15em, field(strong[Case No.])),
+  )
+}
 
 // `from-court: false` is for papers a party gives to another party. They must not
 // look as if the court issued them, so they carry no letterhead.
