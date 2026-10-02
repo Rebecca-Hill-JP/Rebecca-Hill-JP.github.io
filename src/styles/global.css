@@ -152,7 +152,7 @@ img {
 
 .masthead-portrait {
   flex: none;
-  width: clamp(3.5rem, 2.6rem + 4vw, 5rem);
+  width: clamp(3.75rem, 1.6rem + 8vw, 6.75rem);
   border: 2px solid var(--gold);
 }
 
