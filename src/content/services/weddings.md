@@ -3,11 +3,10 @@ title: Weddings
 summary: The Justice of the Peace performs civil marriage ceremonies. You bring a Louisiana marriage license and two adult witnesses.
 order: 3
 fees:
-  - item: Ceremony at the office
-    amount: TODO
-  - item: Ceremony at another place
-    amount: TODO
-    note: State law allows a usual and customary fee. R.S. 13:2588.
+  - item: Ceremony on a weekday
+    amount: $150
+  - item: Ceremony on a Saturday or Sunday
+    amount: $200
 bring:
   - Your marriage license, with every copy the clerk of court gave you.
   - Photo identification for each of you.
@@ -50,7 +49,7 @@ statutes:
 
 ## Can this court help me?
 
-Yes, if you have a Louisiana marriage license, or will have one by the day of the ceremony. A justice of the peace may perform ceremonies in the parish where the court sits and in the other parishes of the same Supreme Court district. Ceremonies are held at TODO.
+Yes, if you have a Louisiana marriage license, or will have one by the day of the ceremony. A justice of the peace may perform ceremonies in the parish where the court sits and in the other parishes of the same Supreme Court district. Ceremonies are held at the office in Abita Springs, any day of the week.
 
 The court does not issue marriage licenses. The clerk of court does.
 
@@ -59,7 +58,7 @@ The court does not issue marriage licenses. The clerk of court does.
 1. **Get a marriage license.** Apply to a clerk of court. A license from any Louisiana parish is good for a ceremony anywhere in the state. Each of you signs the application under oath. The clerk will ask for a certified copy of each birth certificate, identification such as a driver's license or passport, and your Social Security numbers. Ask the clerk about its fee and about anything you do not have.
 2. **Wait 24 hours.** The ceremony cannot take place until 24 hours after the license is issued. For serious reasons, the Justice of the Peace may waive the wait. Ask the office.
 3. **Marry within 30 days.** The license expires 30 days after it is issued.
-4. **Arrange the ceremony.** Send the Wedding Request form or contact the office to choose a date, time, and place.
+4. **Arrange the ceremony.** Call, text, or email the office, or send the Wedding Request form, to choose a date and time.
 5. **Come to the ceremony.** Both of you must be present in person, with two witnesses of full age. Bring the license. The ceremony cannot be performed without it.
 6. **Sign the certificate.** You, your witnesses, and the Justice of the Peace sign the marriage certificate. You receive one copy. The Justice of the Peace files the other copies with the clerk of court who issued the license, within ten days.
 

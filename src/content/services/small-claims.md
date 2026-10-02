@@ -4,20 +4,16 @@ summary: The court decides disputes over money or movable property worth $5,000 
 order: 1
 fees:
   - item: Filing a new suit, one defendant
-    amount: TODO
-    note: State law allows up to $130. R.S. 13:2590(A)(1).
+    amount: $130
   - item: Each additional defendant
-    amount: TODO
-    note: State law allows up to $20. R.S. 13:2590(A)(1).
-  - item: Filing an answer
-    amount: TODO
-  - item: Subpoena for a witness or documents
-    amount: TODO
-    note: State law allows up to $40. R.S. 13:2590(A)(22).
+    amount: $20
+  - item: Other filings
+    amount: Ask the office
+    note: State law sets the most the court may charge for each. R.S. 13:2590.
 bring:
   - The full name and current address of every person or business you are suing.
   - The amount you claim and how you worked it out.
-  - Copies of the papers that support your claim, such as a contract, receipts, invoices, photographs, or messages.
+  - One copy of each paper that supports your claim, such as a contract, receipts, invoices, photographs, or messages.
   - For a claim to movable property, a description of the property and its value.
   - The filing fee.
 forms:
@@ -74,7 +70,7 @@ The full list is in C.C.P. art. 4913.
 
 ## What do I do?
 
-1. **State your claim.** You may tell the court your claim in person or put it in writing. No written pleading is required. The Statement of Claim form asks for everything the court must record: who the parties are, where they can be found, and what you claim and why.
+1. **State your claim.** Call the office for an appointment to file. You may tell the court your claim in person or put it in writing. No written pleading is required. The Statement of Claim form asks for everything the court must record: who the parties are, where they can be found, and what you claim and why.
 2. **Pay the filing fee.** The court may ask for costs in advance. If you cannot afford them, the law lets you ask to go forward without paying in advance (C.C.P. arts. 5181 through 5188). Ask the office how.
 3. **The court notifies the defendant.** The court issues a citation. The constable serves it, or the court sends it by certified mail.
 4. **The defendant answers or appears.** If the citation gives a trial date, the defendant must come to court on that date. The first trial date is at least 10 days and not more than 45 days after the citation is served. If the citation gives no trial date, the defendant must answer within 10 days of being served. The answer may be spoken or written.
@@ -95,4 +91,4 @@ If you do nothing, the court may give judgment against you.
 
 ## Appeal
 
-Either party may appeal. An appeal is a new trial in the parish court or, where there is no parish court, in the district court of the parish. You must file it within 15 days of the date of the judgment, or of the day you were served with notice of the judgment when notice is required. You must also give a copy to the other parties and to this court. For Ward 10, appeals are filed with TODO.
+Either party may appeal. An appeal is a new trial in the parish court or, where there is no parish court, in the district court of the parish. You must file it within 15 days of the date of the judgment, or of the day you were served with notice of the judgment when notice is required. You must also give a copy to the other parties and to this court. For Ward 10, the appeal is filed with the St. Tammany Parish Clerk of Court, 701 North Columbia Street, Covington, for the 22nd Judicial District Court.

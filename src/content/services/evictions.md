@@ -4,16 +4,15 @@ summary: How a landlord or owner asks the court to order a tenant or occupant to
 order: 2
 fees:
   - item: Filing an eviction, one defendant
-    amount: TODO
-    note: State law allows up to $120. R.S. 13:2590(A)(2).
+    amount: $120
   - item: Each additional defendant
-    amount: TODO
-    note: State law allows up to $20. R.S. 13:2590(A)(2).
-  - item: Constable carrying out a warrant for possession
-    amount: TODO
+    amount: $20
+  - item: Other filings and services
+    amount: Ask the office
+    note: State law sets the most the court may charge for each. R.S. 13:2590.
 bring:
-  - The lease, if it is in writing.
-  - A copy of the notice to vacate, and the date and manner in which it was delivered.
+  - Two copies of the lease, if it is in writing.
+  - One copy of the notice to vacate, and the date and manner in which it was delivered.
   - The full name of every tenant or occupant, and the address of the property.
   - Rent records, photographs, or other papers that show the reason for the eviction.
   - The filing fee.
@@ -60,7 +59,7 @@ The court cannot hear the case if the dispute is about who owns the property, or
 
 1. **Give written notice to vacate.** The landlord, or the landlord's agent, must deliver a written notice that gives the tenant at least five days to leave. The court does not deliver this notice for you. An owner who wants an occupant who is not a tenant to leave gives the same five days' notice.
 2. **Count the five days correctly.** Do not count the day the notice is delivered. Do not count legal holidays. If you are unsure whether a day counts, ask the office.
-3. **File a petition of eviction.** If the tenant has not left when the notice period ends, file the petition with this court. It must state the reason for the eviction.
+3. **File a petition of eviction.** If the tenant has not left when the notice period ends, call the office for an appointment and file the petition with this court. It must state the reason for the eviction.
 4. **The court sets a hearing.** The court orders the tenant to come to court and show why the eviction should not be ordered. The constable serves the order. The hearing is no earlier than the third day after service.
 5. **Come to the hearing.** Both sides may speak and show their evidence. If the court finds for the landlord, or if the tenant does not come, the court gives a judgment of eviction at once.
 6. **After the judgment.** The tenant has 24 hours to leave. If the tenant does not, the court issues a warrant and the constable delivers the property to the landlord, in the presence of two witnesses.

@@ -1,7 +1,7 @@
 #import "letterhead.typ": *
 #show: form.with(id: "wedding-request")
 
-Use this form to ask the Justice of the Peace to perform your marriage ceremony. The office will contact you to confirm the date, time, and place.
+Use this form to ask the Justice of the Peace to perform your marriage ceremony. The office will contact you to confirm the date and time.
 
 == The couple
 
@@ -21,10 +21,7 @@ Give each name exactly as it appears on the marriage license.
 
 #grid(columns: (1fr, 1fr), field[Second choice of date], field[Time])
 
-Place:
-#h(0.6em) #check[the office of the Justice of the Peace] #h(1.2em) #check[another place:]
-
-#field[Address]
+Ceremonies are held at the office of the Justice of the Peace.
 
 #field[Number of guests]
 

@@ -1,11 +1,14 @@
 ---
 import { Image } from "astro:assets";
 import headshot from "../assets/headshot.jpg";
+import WardMap from "../assets/ward-10.svg";
 import Base from "../layouts/Base.astro";
 import { jurisdiction, office } from "../office";
 import { href } from "../paths";
 
 const LAW = "https://legis.la.gov/Legis/Law.aspx?d=";
+const PARISH_MAP =
+  "https://maps.stpgov.org/portal/apps/experiencebuilder/experience/?id=8a67da3c29464903b20775c2af26661d";
 ---
 
 <Base
@@ -24,10 +27,10 @@ const LAW = "https://legis.la.gov/Legis/Law.aspx?d=";
       sizes="(max-width: 30rem) 14rem, 11rem"
     />
     <div>
-      {office.biography.map((paragraph) => (
-        <p>{paragraph}</p>
-      ))}
-      <p>First elected: {office.year_elected}</p>
+      <p>
+        {office.justice} is the {office.title} for {office.ward}, {jurisdiction}
+        . She was first elected in {office.year_elected}.
+      </p>
     </div>
   </div>
   <h2>What is a justice of the peace?</h2>
@@ -72,13 +75,20 @@ const LAW = "https://legis.la.gov/Legis/Law.aspx?d=";
     Each justice of the peace court has one constable, elected by the same
     voters for the same six-year term. <a href={`${LAW}77367`}>R.S. 13:2583</a>.
     The constable serves the court's papers and enforces its judgments.{" "}
-    <a href={`${LAW}77372`}>R.S. 13:2586</a>. The Ward 10 constable is{" "}
-    {office.constable}.
+    <a href={`${LAW}77372`}>R.S. 13:2586</a>. The constable who serves this
+    court is {office.constable}.
   </p>
   <h2>Ward 10</h2>
   <p>{office.territory}</p>
+  <figure class="ward-map">
+    <WardMap />
+    <figcaption>
+      Ward boundary, town limits, and roads from St. Tammany Parish Government.
+    </figcaption>
+  </figure>
   <p>
-    Not sure whether you live in Ward 10?{" "}
-    <a href={href("/contact/")}>Contact the office</a>.
+    Not sure whether you live in Ward 10? Search for your address on the{" "}
+    <a href={PARISH_MAP}>parish map of justice of the peace wards</a>, or{" "}
+    <a href={href("/contact/")}>contact the office</a>.
   </p>
 </Base>

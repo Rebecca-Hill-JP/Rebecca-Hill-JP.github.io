@@ -17,6 +17,7 @@ PDFs built from Typst sources.
 | `npm run forms`        | Compile `forms/*.typ` to `public/forms/*.pdf`                |
 | `npm run placeholders` | List every unconfirmed fact; fails while any remains         |
 | `npm run law`          | Confirm the statute wording the site relies on is unchanged  |
+| `npm run map`          | Redraw the Ward 10 map from parish GIS data (needs `uv`)     |
 
 Needs Node 24 and Typst 0.14.
 
@@ -39,8 +40,30 @@ disagree.
 
 A fact the office has not confirmed is the literal word `TODO`. The deploy
 workflow runs `npm run placeholders` first and refuses to publish while any
-remains. Replace each one from the office's answers to
-`intake/office-questionnaire.docx` (not in the repository).
+remains. None remains: the office answered the intake questionnaire on
+2026-10-02.
+
+Where the office left a question blank, the site says nothing or says "Ask the
+office"; it does not guess. Still open:
+
+- a biography for the About page;
+- fees for an answer, a subpoena, a constable move-out, and notary work;
+- regular hearing days, if any;
+- whether the court has a district or division name. Ward 10 has two justices
+  of the peace, and the site calls this one "Justice of the Peace Court,
+  Ward 10";
+- the forms the office uses today, to compare with the drafts.
+
+Looked up, not supplied by the office, and to be confirmed by her: the clerk
+of court's address for appeals (from the clerk's information guide) and the
+description of Ward 10 (from the parish map).
+
+## Ward map
+
+`src/assets/ward-10.svg` is drawn by `map/build.py` from St. Tammany Parish
+Government GIS layers: ward boundaries, town limits, major roads, and the
+office's address point. Nothing on it is traced by hand. Run `npm run map` if
+the parish changes the boundary.
 
 ## Law
 

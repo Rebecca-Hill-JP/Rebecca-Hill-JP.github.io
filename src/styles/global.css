@@ -365,6 +365,87 @@ td.amount {
   }
 }
 
+.ward-map {
+  margin: 0 0 var(--space);
+}
+
+.ward-map svg {
+  display: block;
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+  background: var(--paper-deep);
+  border: 1px solid var(--ink);
+  font-family: var(--body);
+}
+
+.ward-map figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: var(--size-small);
+}
+
+.ward-map path {
+  fill: none;
+}
+
+.ward-map .neighbor {
+  stroke: var(--muted);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.ward-map .ward {
+  fill: var(--paper);
+}
+
+.ward-map .town {
+  fill: var(--gold);
+  fill-opacity: 0.45;
+}
+
+.ward-map .road {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+
+.ward-map .boundary {
+  stroke: var(--gold);
+  stroke-width: 5;
+  stroke-linejoin: round;
+}
+
+.ward-map .bar {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+
+.ward-map .office {
+  fill: var(--ink);
+  stroke: var(--gold);
+  stroke-width: 3;
+}
+
+.ward-map text {
+  fill: var(--ink);
+  font-size: 21px;
+  paint-order: stroke;
+  stroke: var(--paper);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.ward-map .town-name,
+.ward-map .office-name {
+  font-weight: 600;
+}
+
+.ward-map .town-name {
+  font-family: var(--display);
+  font-size: 28px;
+  text-anchor: middle;
+}
+
 .contact {
   display: grid;
   grid-template-columns: max-content minmax(0, 1fr);

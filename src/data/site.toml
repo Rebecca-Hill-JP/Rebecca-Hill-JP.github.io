@@ -6,24 +6,24 @@
 justice = "Rebecca Hill"
 title = "Justice of the Peace"
 ward = "Ward 10"
-parish = "TODO"
+parish = "St. Tammany"
 state = "Louisiana"
-year_elected = "TODO"
-phone = "TODO"
-fax = "TODO"
-email = "TODO"
-hours = ["TODO"]
-hearing_days = "TODO"
-territory = "TODO"
-constable = "TODO"
-constable_phone = "TODO"
-payment_methods = "TODO"
-payable_to = "TODO"
-how_to_file = "TODO"
-biography = ["TODO"]
+year_elected = "2021"
+phone = "(985) 705-3849"
+email = "rebeccahill.jp@gmail.com"
+hours = [
+  "Monday through Friday, 9:00 a.m. to 5:00 p.m.",
+  "Saturday and Sunday by appointment",
+]
+territory = "Ward 10 takes in most of the town of Abita Springs and the area north and east of it."
+constable = "Byron Armand"
+constable_phone = "(985) 373-4660"
+payment_methods = "cash, check, or card"
+payable_to = "Rebecca Hill"
+how_to_file = "File in person, by appointment. Call the office to arrange a time."
 
 [office.address]
-street = "TODO"
-city = "TODO"
+street = "71667 Leveson Street, Suite 6"
+city = "Abita Springs"
 state = "LA"
-zip = "TODO"
+zip = "70420"

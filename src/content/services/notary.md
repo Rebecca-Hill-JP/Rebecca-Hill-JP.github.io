@@ -4,11 +4,11 @@ summary: The Justice of the Peace can administer oaths and notarize affidavits, 
 order: 4
 fees:
   - item: Notarizing a document
-    amount: TODO
+    amount: Ask the office
     note: Set by the customary practice of the parish. R.S. 13:2586.1(D).
 bring:
   - Your document, complete but not signed.
-  - Government photo identification for each person who will sign.
+  - A driver's license or passport for each person who will sign.
   - Every person who will sign. Each must sign in front of the Justice of the Peace.
   - For a vehicle, the title and any other papers the Office of Motor Vehicles requires.
   - The notary fee.
@@ -41,5 +41,5 @@ For those, see a commissioned notary or a lawyer.
 ## What do I do?
 
 1. **Prepare your document.** Fill it in completely. Do not sign it yet.
-2. **Arrange a time.** TODO
-3. **Come in person.** Every person who signs must appear with identification and sign in front of the Justice of the Peace.
+2. **Make an appointment.** Notary services are by appointment. Call the office.
+3. **Come in person.** Every person who signs must appear with a driver's license or passport and sign in front of the Justice of the Peace.

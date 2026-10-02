@@ -62,7 +62,7 @@ The defendant is:
 #item[The time allowed by the notice has ended and the defendant has not vacated.]
 
 Attached to this petition:
-#h(0.6em) #check[a copy of the notice to vacate] #h(1.2em) #check[a copy of the lease]
+#h(0.6em) #check[a copy of the notice to vacate] #h(1.2em) #check[two copies of the lease]
 
 == Request
 

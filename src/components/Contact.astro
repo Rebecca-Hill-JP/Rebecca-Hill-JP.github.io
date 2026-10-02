@@ -1,5 +1,5 @@
 ---
-import { office } from "../office";
+import { office, telephone_link } from "../office";
 
 const { street, city, state, zip } = office.address;
 const locality = `${city}, ${state} ${zip}`;
@@ -19,10 +19,8 @@ const map_url = `https://www.google.com/maps/search/?api=1&query=${map_query}`;
   </dd>
   <dt>Telephone</dt>
   <dd>
-    <a href={`tel:${office.phone}`}>{office.phone}</a>
+    <a href={telephone_link(office.phone)}>{office.phone}</a>
   </dd>
-  <dt>Fax</dt>
-  <dd>{office.fax}</dd>
   <dt>Email</dt>
   <dd>
     <a href={`mailto:${office.email}`}>{office.email}</a>

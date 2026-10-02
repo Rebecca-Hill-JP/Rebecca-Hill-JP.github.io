@@ -1,7 +1,7 @@
 ---
 import Contact from "../components/Contact.astro";
 import Base from "../layouts/Base.astro";
-import { court, jurisdiction, office } from "../office";
+import { court, jurisdiction, office, telephone_link } from "../office";
 ---
 
 <Base
@@ -19,18 +19,18 @@ import { court, jurisdiction, office } from "../office";
     hearing is. Staff cannot tell you whether to file, what to say, or how your
     case will come out. Those are questions for a lawyer.
   </p>
-  <h2>Hearings</h2>
-  <p>{office.hearing_days}</p>
+  <h2>Filing</h2>
+  <p>{office.how_to_file}</p>
   <h2>Constable</h2>
-  <p>
-    The Ward 10 constable serves the court's papers and carries out its orders.
-  </p>
+  <p>The constable serves the court's papers and carries out its orders.</p>
   <dl class="contact">
     <dt>Constable</dt>
     <dd>{office.constable}</dd>
     <dt>Telephone</dt>
     <dd>
-      <a href={`tel:${office.constable_phone}`}>{office.constable_phone}</a>
+      <a href={telephone_link(office.constable_phone)}>
+        {office.constable_phone}
+      </a>
     </dd>
   </dl>
 </Base>

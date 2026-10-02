@@ -50,7 +50,7 @@ State briefly what the claim is based on. Describe any promissory note or other 
 
 == Attachments
 
-Attach two copies of every document that supports your claim.
+Attach one copy of every document that supports your claim.
 
 #item[Open account: a sworn statement that the account is correct is attached.]
 

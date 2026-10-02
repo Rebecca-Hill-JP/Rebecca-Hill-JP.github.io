@@ -10,7 +10,6 @@ import { href } from "../paths";
 const services = (await getCollection("services")).sort(
   (a, b) => a.data.order - b.data.order,
 );
-const [introduction] = office.biography;
 ---
 
 <Base
@@ -50,7 +49,10 @@ const [introduction] = office.biography;
       sizes="(max-width: 30rem) 14rem, 11rem"
     />
     <div>
-      <p>{introduction}</p>
+      <p>
+        {office.title}, {office.ward}, {jurisdiction}. First elected in{" "}
+        {office.year_elected}.
+      </p>
       <p>
         <a href={href("/about/")}>About the Justice of the Peace</a>
       </p>
