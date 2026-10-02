@@ -33,6 +33,8 @@ TOWN_LABEL = (
 )  # (longitude, latitude), chosen by eye inside the town limits
 
 LABEL_CLEARANCE = 40  # pixels kept between one road label and the next
+# Local streets residents use to find the edge of the ward: the parish's name for each, and its label.
+LANDMARK_STREETS = {"HARRISON AV": "Harrison Ave"}
 TOWN_LABEL_WIDTH = 190  # pixels; the town name is centered on its point
 OFFICE_LABEL_WIDTH = 120  # pixels; the office name starts beside its marker
 
@@ -116,6 +118,24 @@ def along(run: list[Point], step: float) -> list[Point]:
             for i in range(count)
         )
     return points
+
+
+def landmark_names(frame: Frame, landmarks: list[dict]) -> str:
+    """Name each landmark street once, under its westernmost stretch on the canvas."""
+    labels = []
+    for street, label in LANDMARK_STREETS.items():
+        pixels = [
+            frame.project(point)
+            for landmark in landmarks
+            if landmark["properties"]["STREET"] == street
+            for run in rings(landmark["geometry"])
+            for point in run
+        ]
+        x, y = min(pixel for pixel in pixels if pixel[0] >= LABEL_EDGE / 2)
+        labels.append(
+            f'<text class="road-local" x="{x:.0f}" y="{y + 20:.0f}">{label}</text>'
+        )
+    return "".join(labels)
 
 
 def keep_clear(start: float, end: float, y: float) -> list[Point]:
@@ -244,13 +264,17 @@ def build() -> str:
     towns = query("City_Limit", **envelope)
     roads = query("Major_Roads", **envelope)
     streets = query("Roads", where="STN_CLASS = 'SH'", **envelope)
+    street_list = ", ".join(f"'{street}'" for street in LANDMARK_STREETS)
+    landmarks = query("Roads", where=f"STREET IN ({street_list})", **envelope)
     office = query("Address_Points", where=f"ADDRESS = '{OFFICE_ADDRESS}'")[0]
     office_x, office_y = frame.project(office["geometry"]["coordinates"])
     bar = SCALE_BAR_MILES * MILE * frame.meter
     bar_y = frame.height - 18
     neighbors = "".join(frame.lines(feature["geometry"]) for feature in wards)
     town_paths = "".join(frame.area(feature["geometry"]) for feature in towns)
-    road_paths = "".join(frame.lines(feature["geometry"]) for feature in roads)
+    road_paths = "".join(
+        frame.lines(feature["geometry"]) for feature in [*roads, *landmarks]
+    )
     town_x, town_y = frame.project(TOWN_LABEL)
     boundary = along([frame.project(point) for point in outline], LABEL_CLEARANCE / 2)
     left, top_edge = frame.project((west + MARGIN, north - MARGIN))
@@ -276,6 +300,7 @@ def build() -> str:
 <path class="road" d="{road_paths}"/>
 <path class="boundary" d="{frame.area(ward["geometry"])}"/>
 {road_labels}
+{landmark_names(frame, landmarks)}
 <text class="town-name" x="{town_x:.0f}" y="{town_y:.0f}">Abita Springs</text>
 <circle class="office" cx="{office_x:.1f}" cy="{office_y:.1f}" r="7"/>
 <text class="office-name" x="{office_x + 13:.0f}" y="{office_y + 5:.0f}">Court office</text>
