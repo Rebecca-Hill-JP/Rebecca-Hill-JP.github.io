@@ -4,7 +4,7 @@
 #let office = toml("/src/data/site.toml").office
 #let catalog = toml("/src/data/forms.toml")
 
-#let GOLD = rgb("#cfb070")
+#let GOLD = rgb("#c5a059")
 #let INK = rgb("#111111")
 #let DISPLAY = "Cormorant SC"
 #let BODY = "Source Serif 4"

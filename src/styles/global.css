@@ -1,9 +1,12 @@
 :root {
-  /* Gold is sampled from the office sign. It passes contrast only on ink, so it
-     is used for type on ink and for rules and fills elsewhere, never for type on paper. */
-  --gold: #cfb070;
+  /* Navy carries the structure: header, footer, and hover fills. Gold passes
+     contrast on navy (5.7:1) and under ink type, but not on paper (2.3:1), so it
+     is used for type on navy and for rules and fills elsewhere, never for type
+     on paper. */
+  --gold: #c5a059;
   --ink: #111111;
-  --paper: #faf7f0;
+  --navy: #1a2b4c;
+  --paper: #f9f8f6;
   --paper-deep: #f1ebdc;
   --muted: #4d483d;
 
@@ -33,7 +36,7 @@ html {
   font-size: 100%;
   line-height: 1.6;
   color: var(--ink);
-  background: var(--ink);
+  background: var(--navy);
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -104,7 +107,7 @@ a[target="_blank"] {
 }
 
 .colophon a[target="_blank"] {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 1h6v6M9 1 1 9' fill='none' stroke='%23cfb070' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 1h6v6M9 1 1 9' fill='none' stroke='%23c5a059' stroke-width='1.6'/%3E%3C/svg%3E");
 }
 
 a[target="_blank"]::after {
@@ -151,7 +154,7 @@ img {
 
 .masthead,
 .colophon {
-  background: var(--ink);
+  background: var(--navy);
   color: var(--gold);
 }
 
@@ -293,7 +296,7 @@ main li > ol {
   width: 2.2em;
   height: 2.2em;
   border-radius: 50%;
-  background: var(--ink);
+  background: var(--navy);
   color: var(--gold);
   font-weight: 600;
   font-variant-numeric: lining-nums;
@@ -349,7 +352,7 @@ td.amount {
 }
 
 .button:hover {
-  background: var(--ink);
+  background: var(--navy);
   color: var(--gold);
 }
 
@@ -361,8 +364,8 @@ td.amount {
 }
 
 .button[target="_blank"]:hover {
-  background: var(--ink)
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 1h6v6M9 1 1 9' fill='none' stroke='%23cfb070' stroke-width='1.6'/%3E%3C/svg%3E")
+  background: var(--navy)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 1h6v6M9 1 1 9' fill='none' stroke='%23c5a059' stroke-width='1.6'/%3E%3C/svg%3E")
     right 0.85rem center / 0.62em no-repeat;
 }
 
@@ -390,7 +393,7 @@ td.amount {
 
 .cards a:hover,
 .cards a:focus-visible {
-  background: var(--ink);
+  background: var(--navy);
   color: var(--gold);
 }
 
