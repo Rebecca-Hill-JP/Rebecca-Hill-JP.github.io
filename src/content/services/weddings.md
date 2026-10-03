@@ -53,7 +53,7 @@ statutes:
 
 ## Can this court help me?
 
-Yes, if you have a Louisiana marriage license, or will have one by the day of the ceremony. A justice of the peace may perform ceremonies in the parish where the court sits and in the other parishes of the same Supreme Court district. Ceremonies are held at the office in Abita Springs, any day of the week.
+Yes, if you have a Louisiana marriage license, or will have one by the day of the ceremony. A justice of the peace may perform ceremonies in the parish where the court sits and in the other parishes of the same Supreme Court district. Ceremonies are typically held at the office in Abita Springs, any day of the week.
 
 The court does not issue marriage licenses. The clerk of court does.
 

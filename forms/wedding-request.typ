@@ -21,7 +21,7 @@ Give each name exactly as it appears on the marriage license.
 
 #grid(columns: (1fr, 1fr), field[Second choice of date], field[Time])
 
-Ceremonies are held at the office of the Justice of the Peace.
+Ceremonies are typically held at the office of the Justice of the Peace.
 
 #field[Number of guests]
 
