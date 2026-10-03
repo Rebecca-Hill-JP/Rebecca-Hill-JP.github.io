@@ -84,7 +84,7 @@ A judgment says who owes what. It does not collect the money. If the other party
 
 ## Ownership of a vehicle
 
-The court can hear a suit over the ownership of a vehicle worth $5,000 or less. The owner of record, or the person the vehicle was acquired from, is named as the defendant and is notified before the court decides. The Office of Motor Vehicles recognizes a judgment of ownership, but it sets its own requirements for issuing a title, and a judgment does not guarantee one. Start with the Judgment of Ownership of a Vehicle form.
+The court can render a judgment of ownership of a vehicle worth $5,000 or less, on your sworn statement of how you acquired it and the documents you attach. The Office of Motor Vehicles recognizes a judgment of ownership, but it sets its own requirements for issuing a title, and a judgment does not guarantee one. Start with the Judgment of Ownership of a Vehicle form.
 
 ## If you have been sued
 

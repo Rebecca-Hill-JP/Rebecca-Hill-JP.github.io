@@ -8,6 +8,10 @@ clerk of court. No written pleadings shall be required."
 therefore only need to capture what the law and the baseline forms capture.
 This file records that comparison, field by field.
 
+Rule, set by the office: where the Attorney General publishes a sample form,
+our form follows its procedure. A legal concern about a sample is recorded
+here, not designed into the form.
+
 Status: drafted from the baselines below and adjusted to the office's answers
 to the intake questionnaire (2026-10-02). Not yet compared with the forms the
 office uses today, and not yet reviewed by the Justice of the Peace.
@@ -216,33 +220,35 @@ nothing about that case.
 ## Judgment of Ownership of a Vehicle (`ownership-judgment.typ`)
 
 Baselines: the Attorney General's "Court Order" and "Affidavit of Applicant"
-(JCM p. 234 and the forms index), and Office of Motor Vehicles Policy 3.00,
-"Justice of the Peace Court Orders" (revised 2024-06-17).
+(JCM p. 234 and the forms index), the Office of Motor Vehicles "Request for
+Review Prior to Judgment" (JCM p. 233), and Office of Motor Vehicles Policy
+3.00, "Justice of the Peace Court Orders" (revised 2024-06-17).
 
-| Our field                                                                            | AG sample                              | OMV Policy 3.00                                                       | Law                                    |
-| ------------------------------------------------------------------------------------ | -------------------------------------- | --------------------------------------------------------------------- | -------------------------------------- |
-| Plaintiff name, address                                                              | "Applicant"; current owner and address | name of person awarded ownership                                      | art. 4912(A)(1), "suits"               |
-| Defendant: owner of record, or the seller                                            |                                        | adversarial proceedings "must be against the owner of record"         | art. 1201(A), citation essential       |
-| Year, make, model, VIN                                                               | same                                   | same                                                                  | art. 4919(C)(2), describe the property |
-| Value; where the vehicle is kept                                                     |                                        | value under $5,000, with facts if a guide says more                   | art. 4912(A)(1), value and territory   |
-| Date acquired; consideration                                                         | date of sale; price                    | same                                                                  |                                        |
-| Seller and last known address                                                        | same                                   | same                                                                  |                                        |
-| How acquired, and why title papers are unavailable                                   | "Nature of Acquisition"                | same                                                                  |                                        |
-| Attachments: bill of sale, title or registration, inspection affidavit, lien release |                                        | same                                                                  |                                        |
-| Oath before the Justice of the Peace                                                 | "Sworn to and subscribed before me"    |                                                                       | R.S. 13:2586.1(A)(1), (E)              |
-| Judgment: service, appearance or default, hearing date                               |                                        | "proof of the proceedings"                                            | arts. 1201, 4920, 4921, 4921.1         |
-| Judgment: lien findings as tick boxes                                                | "the vehicle is lien free"             | "must state that the vehicle is lien free", or a satisfaction of lien | R.S. 32:712                            |
-| Judgment on letterhead, signed and dated                                             | letterhead block                       | "on letterhead"                                                       | art. 4923                              |
+| Our field                                                                            | AG sample                                                 | OMV                                                                   | Law                                  |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------ |
+| Applicant name, address                                                              | "Applicant"; current owner                                | name of applicant (owner in possession); physical address             | art. 4912(A)(1)                      |
+| Year, make, model, VIN                                                               | same                                                      | same                                                                  |                                      |
+| Value; where the vehicle is kept                                                     |                                                           | value under $5,000, with facts if a guide says more                   | art. 4912(A)(1), value and territory |
+| Date acquired; consideration                                                         | date acquired; price                                      | same                                                                  |                                      |
+| Seller and last known address                                                        | same                                                      | same                                                                  |                                      |
+| Did the seller have proof of ownership                                               |                                                           | Request for Review, item 4                                            |                                      |
+| Reasons title papers are unavailable, as tick boxes                                  |                                                           | Request for Review, item 5                                            |                                      |
+| How acquired, explained                                                              | "Nature of Acquisition"                                   | same                                                                  |                                      |
+| Attachments: bill of sale, title or registration, inspection affidavit, lien release |                                                           | same                                                                  |                                      |
+| Oath before the Justice of the Peace                                                 | "Sworn to and subscribed before me"                       |                                                                       | R.S. 13:2586.1(A)(1), (E)            |
+| Judgment on the affidavit and documents, no defendant                                | "upon receipt of proper documents and attached affidavit" |                                                                       | art. 4912                            |
+| Judgment: lien findings as tick boxes                                                | "the vehicle is lien free"                                | "must state that the vehicle is lien free", or a satisfaction of lien | R.S. 32:712                          |
+| Judgment: value, with facts if a guide says more                                     |                                                           | same                                                                  |                                      |
+| Judgment on letterhead, signed and dated                                             | letterhead block                                          | "on letterhead"                                                       | art. 4923                            |
 
-A deliberate departure from the Attorney General's sample. The sample has the
-justice "upon receipt of proper documents and attached affidavit ... render
-Judgment", with no defendant. The independent review found no support for that
-in the Code: art. 4912 gives jurisdiction over "suits", art. 1201(A) makes
-citation and service essential ("Without them all proceedings are absolutely
-null"), and art. 4913(B)(9) denies jurisdiction over in rem proceedings. The
-form is therefore a suit against the owner of record, and the judgment recites
-service and the hearing. The Justice of the Peace decides whether to follow
-the sample instead.
+Follows the Attorney General's sample: judgment on the applicant's affidavit,
+with no defendant. The independent review read the Code otherwise: art. 4912
+gives jurisdiction over "suits", art. 1201(A) makes citation and service
+essential ("Without them all proceedings are absolutely null"), art.
+4913(B)(9) denies jurisdiction over in rem proceedings, and OMV Policy 3.00
+says adversarial proceedings "must be against the owner of record". If those
+hold, a judgment without a served defendant could later be attacked as null.
+The office chose the sample (2026-10-02).
 
 ## Court papers not published
 
