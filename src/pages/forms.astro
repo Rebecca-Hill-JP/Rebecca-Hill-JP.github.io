@@ -1,30 +1,24 @@
 ---
-import { getCollection, getEntries } from "astro:content";
+import { getCollection } from "astro:content";
 import FormList from "../components/FormList.astro";
 import Base from "../layouts/Base.astro";
 import { office } from "../office";
 
-const services = (await getCollection("services"))
-  .filter((service) => service.data.forms.length > 0)
-  .sort((a, b) => a.data.order - b.data.order);
-const groups = await Promise.all(
-  services.map(async (service) => ({
-    title: service.data.title,
-    forms: await getEntries(service.data.forms),
-  })),
+const all = (await getCollection("forms")).sort(
+  (a, b) => a.data.order - b.data.order,
 );
-const all = await getCollection("forms");
-const office_forms = all.filter((form) => form.data.office);
-const grouped = groups.flatMap((group) => group.forms);
-const misplaced = all.filter(
-  (form) =>
-    form.data.office === grouped.some((listed) => listed.id === form.id),
-);
-if (misplaced.length > 0) {
-  throw new Error(
-    `Forms ${misplaced.map((form) => form.id).join(", ")}: list each resident form in one service's forms, and mark each office form office = true in src/data/forms.toml instead.`,
-  );
-}
+const office_forms = all.filter((form) => "office" in form.data);
+const sections = [
+  ...new Set(
+    all.flatMap((form) => ("section" in form.data ? [form.data.section] : [])),
+  ),
+];
+const groups = sections.map((section) => ({
+  title: section,
+  forms: all.filter(
+    (form) => "section" in form.data && form.data.section === section,
+  ),
+}));
 ---
 
 <Base

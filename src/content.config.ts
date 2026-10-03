@@ -31,14 +31,19 @@ const site = defineCollection({
   }),
 });
 
+const form = {
+  order: z.number().int(),
+  title: text,
+  purpose: text,
+  revised: z.coerce.date(),
+};
+
 const forms = defineCollection({
   loader: file("src/data/forms.toml"),
-  schema: z.strictObject({
-    title: text,
-    purpose: text,
-    revised: z.coerce.date(),
-    office: z.boolean().default(false),
-  }),
+  schema: z.union([
+    z.strictObject({ ...form, section: text }),
+    z.strictObject({ ...form, office: z.literal(true) }),
+  ]),
 });
 
 const services = defineCollection({

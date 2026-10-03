@@ -1,46 +1,62 @@
 # One table per form. The table name is the form id: forms/<id>.typ builds to
 # /forms/<id>.pdf. Field-by-field sources are in forms/SOURCES.md.
-# office = true: completed with the Justice of the Peace in person, so the
-# forms page lists it apart, collapsed, and no service page lists it.
+# The forms page lists forms by order, resident forms under their section,
+# sections in the order of their first form. office = true instead of a
+# section: used by the Justice of the Peace in the office, so the forms page
+# lists it apart, collapsed.
 
 [civil-claim]
+order = 1
 title = "Statement of Claim"
 purpose = "Start a small claims case for money or movable property worth $5,000 or less."
 revised = 2026-10-02
+section = "Small Claims"
 
 [answer]
+order = 2
 title = "Defendant's Answer"
 purpose = "Answer a claim that has been filed against you."
 revised = 2026-10-02
+section = "Small Claims"
 
 [notice-to-vacate]
+order = 3
 title = "Notice to Vacate"
 purpose = "A landlord or owner gives this written notice to a tenant or occupant before filing an eviction. It is delivered to the tenant, not filed with the court."
 revised = 2026-10-02
+section = "Evictions"
 
 [eviction-petition]
+order = 4
 title = "Petition of Eviction"
 purpose = "Ask the court to order a tenant or occupant to leave, after the notice to vacate has run out."
 revised = 2026-10-02
+section = "Evictions"
 
 [wedding-request]
+order = 5
 title = "Wedding Request"
 purpose = "Ask the Justice of the Peace to perform your marriage ceremony."
 revised = 2026-10-02
+section = "Weddings"
+
+[ownership-judgment]
+order = 6
+title = "Judgment of Ownership of a Vehicle"
+purpose = "Ask the court to recognize you as the owner of a vehicle worth $5,000 or less when you cannot get a title."
+revised = 2026-10-02
+section = "Vehicle Ownership"
 
 [delay-waiver]
+order = 7
 title = "Waiver of the 24-Hour Delay"
 purpose = "Ask the Justice of the Peace to allow a marriage ceremony less than 24 hours after the license is issued."
 revised = 2026-10-02
 office = true
 
 [birth-certificate-waiver]
+order = 8
 title = "Waiver of Birth Certificate"
 purpose = "Ask the court to order that a marriage license be issued when no birth certificate is on file for an applicant born in the United States."
 revised = 2026-10-02
 office = true
-
-[ownership-judgment]
-title = "Judgment of Ownership of a Vehicle"
-purpose = "Ask the court to recognize you as the owner of a vehicle worth $5,000 or less when you cannot get a title."
-revised = 2026-10-02
