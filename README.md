@@ -121,9 +121,10 @@ uncertain, leave it out. A resident can ask the office; a wrong statement on a
 court's site does harm.
 
 Two corrections matter most. Saturdays and Sundays do not count in the five-day
-notice to vacate (R.S. 1:55(E)(3)). And the forms no longer ask for anything
-the law does not require: witnesses to a notice, a mailed copy of an answer, a
-consent to judgment.
+notice to vacate (R.S. 1:55(E)(3)). The review also dropped from the forms
+what the law does not require (witnesses to a notice, a mailed copy of an
+answer, a consent to judgment); the office later restored them, because the
+forms follow the Attorney General's samples.
 
 A second review the same day covered the two marriage waivers and the vehicle
 judgment (`law/review-forms-2026-10-02.md`). The waivers needed only wording

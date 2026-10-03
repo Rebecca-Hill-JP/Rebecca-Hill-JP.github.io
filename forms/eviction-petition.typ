@@ -52,11 +52,11 @@ The defendant is:
 #item[The plaintiff gave written notice to vacate #h(0.4em) #field[on (date)]]
 
 #pad(left: 1.6em)[
-  #item[handed to the defendant]
+  #item[handed to the defendant, witnessed]
 
   #item[sent by certified mail; the receipt is attached]
 
-  #item[attached to a door (premises abandoned or closed, or whereabouts unknown)]
+  #item[posted on a door, witnessed (if abandoned, closed, or whereabouts unknown)]
 ]
 
 #item[The time allowed by the notice has ended and the defendant has not vacated.]
@@ -66,7 +66,7 @@ Attached:
 
 == Request
 
-The plaintiff asks that the defendant be ordered to show cause why the defendant should not be ordered to vacate the premises and deliver possession to the plaintiff, and asks for the costs of these proceedings.
+The plaintiff has followed the eviction laws of Louisiana as marked above, and asks that the defendant be ordered to show cause why the defendant should not vacate and deliver possession to the plaintiff, with costs.
 
 #grid(
   columns: (3fr, 2fr),

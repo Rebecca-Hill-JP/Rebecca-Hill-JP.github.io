@@ -23,7 +23,7 @@
 
   *What happened.* In your own words: who did what, when, and how you worked out the amount. Describe any note, contract, lease, or invoice. For a claim to property, describe the property and give its value.
 
-  *Attachments.* Attach one copy of each paper that supports your claim. Keep the originals and bring them to the trial. For an open account, attach a statement of the account sworn before a notary. For a returned check, attach your written demand for payment and its certified mail receipt.
+  *Attachments.* Attach one copy of each paper that supports your claim. Keep the originals and bring them to the trial. For an open account, attach a statement of the account sworn before a notary and proof that copies were sent to the defendant by certified mail. For a returned check, attach the certified mail receipt for your 30-day written demand.
 
   == Sign and file
 
@@ -90,9 +90,9 @@ State briefly what the claim is based on. Describe any promissory note or other 
 
 Attach one copy of every document that supports your claim.
 
-#item[Open account: a sworn statement that the account is correct is attached.]
+#item[Open account: sworn statement of account; proof sent by certified mail.]
 
-#item[NSF check: a copy of the written demand and its certified mail receipt is attached.]
+#item[NSF check: certified mail receipt for the written demand giving 30 days to pay.]
 
 == Signature
 

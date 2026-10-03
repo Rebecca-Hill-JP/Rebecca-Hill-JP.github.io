@@ -41,7 +41,7 @@ Should you fail to vacate within this period, court proceedings will be taken im
 
 #field[Mailing address]
 
-#grid(columns: (1fr, 1fr), signature[Witness (optional)], signature[Witness (optional)])
+#grid(columns: (1fr, 1fr), signature[Witness], signature[Witness])
 
 #pagebreak()
 

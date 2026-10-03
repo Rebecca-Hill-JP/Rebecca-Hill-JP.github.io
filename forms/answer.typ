@@ -3,17 +3,21 @@
 
 #caption()
 
-Use this form to tell the court whether you contest the plaintiff's claim. Do not ignore the citation. If you do not answer or appear in time, the court may give a default judgment against you.
+Use this form to tell the court whether you contest the plaintiff's claim. Do not ignore the citation. If you do not answer within 10 days after the citation is served, or appear on the trial date it gives, the court may give a default judgment against you.
+
+Include every defense you have. File your answer with the court and mail a copy to the plaintiff; regular mail is fine.
+
+If you have a claim of your own against the plaintiff, you may file a reconventional demand. The plaintiff must be served with it before the trial. Ask the office.
 
 == Your answer
 
-Mark the statement that applies.
+Mark the statement that applies, explain your answer below, or both.
 
 #item[I do not owe the plaintiff any part of what is claimed.]
 
 #item[I owe the plaintiff only part of what is claimed. #h(0.6em) #field[I agree that I owe \$]]
 
-#item[I owe the plaintiff what is claimed.]
+#item[I owe the plaintiff what is claimed. I waive any further appearance and delays, and consent to judgment against me in the amount claimed.]
 
 == Your reasons
 
