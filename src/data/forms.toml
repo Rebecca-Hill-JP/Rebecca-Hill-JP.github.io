@@ -81,3 +81,17 @@ title = "Judgment in Favor of Defendant"
 purpose = "The court's judgment for the defendant on a reconventional demand after a trial both parties attended."
 revised = 2026-10-02
 office = true
+
+[citation]
+order = 12
+title = "Citation"
+purpose = "Tells a defendant they have been sued, and to answer within 10 days or appear on the trial date."
+revised = 2026-10-02
+office = true
+
+[eviction-rule]
+order = 13
+title = "Rule to Show Cause: Eviction"
+purpose = "Tells a tenant or occupant they have been sued for eviction and when to appear in court, with the constable's record of delivery."
+revised = 2026-10-02
+office = true

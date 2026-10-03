@@ -165,7 +165,8 @@ Left out on purpose:
 - AG 43's separate "Written Rental Agreement" box; merged with "written lease".
 - The order to show cause (AG 44) and the constable's return (AG 48). MAN prints
   them on the petition. They are the court's papers, not the party's, so they
-  are not published here. The office confirmed it keeps them separate.
+  are not on this form. The office keeps them separate; the order is the
+  office form "Rule to Show Cause: Eviction".
 
 ## Wedding Request (`wedding-request.typ`)
 
@@ -290,8 +291,42 @@ As in the samples, both assume both parties appeared. A default judgment
 (AG 12) and a judgment for the defendant with no reconventional demand are
 not covered. "District" is left out, as on the other captions.
 
+## Citation (`citation.typ`)
+
+Baseline: AG 05 "Citation". An office form, on letterhead.
+
+| Our field                                                        | AG 05                                                  | Law                                            |
+| ---------------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------- |
+| Caption, Case No.; court name, address, telephone (letterhead)   | same                                                   |                                                |
+| Plaintiff and defendant: address, telephone                      | address, telephone, fax                                |                                                |
+| "You have been sued"; petition and supporting documents attached | same                                                   |                                                |
+| Comply or answer, with exceptions, within ten days of service    | same; "use the form ... entitled 'Defendant's Answer'" | art. 4920                                      |
+| Or appear for trial on a date and time at the office             |                                                        | art. 4921.1, trial 10 to 45 days after service |
+| Default judgment warning; talk with an attorney                  | same                                                   | art. 4921                                      |
+| "Witness my hand"; Justice of the Peace signs                    | "WITNESS THIS ... DAY OF"                              |                                                |
+
+Departure, at the office's request: a box for a trial date. The office asked
+for a citation with the court date; the law lets a citation set a trial date
+in place of the ten days to answer. One of the two boxes is marked.
+
+## Rule to Show Cause: Eviction (`eviction-rule.typ`)
+
+Baseline: AG 44 "Petition Order", the order on the eviction petition. An
+office form, on letterhead. The office asked for "the form that says you have
+been sued for eviction".
+
+| Our field                                                                          | AG 44                             | Law                                                        |
+| ---------------------------------------------------------------------------------- | --------------------------------- | ---------------------------------------------------------- |
+| Caption, Case No.                                                                  | none (printed under the petition) |                                                            |
+| Ordered to show cause in court on a date                                           | same                              | art. 4732(A), not earlier than the third day after service |
+| Time and place                                                                     |                                   |                                                            |
+| Why judgment should not issue and the plaintiff not get possession within 24 hours | same                              | art. 4732                                                  |
+| Default judgment warning; "let the above rule show cause"                          | same                              | art. 4732                                                  |
+| "Witness my hand"; Justice of the Peace signs                                      | same                              |                                                            |
+| Constable: date delivered; personal, domiciliary, or posted on the door            | same                              |                                                            |
+
 ## Court papers not published
 
-Citation, other judgments, order to show cause, warrant for possession, and
-returns are issued by the court and are not on the site. The Attorney General
-baseline has them as forms 05, 07, 11, 12, 15, and 44 to 48.
+Other judgments, the warrant for possession, and the constable's returns are
+issued by the court and are not on the site. The Attorney General baseline has
+them as forms 07, 11, 12, 15, and 45 to 48.
