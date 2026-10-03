@@ -12,8 +12,9 @@ year_elected = "2021"
 phone = "(985) 705-3849"
 email = "rebeccahill.jp@gmail.com"
 hours = [
+  "By appointment only",
   "Monday through Friday, 9:00 a.m. to 5:00 p.m.",
-  "Saturday and Sunday by appointment",
+  "Saturday and Sunday by arrangement",
 ]
 territory = "Ward 10 takes in most of the town of Abita Springs and the area north and east of it."
 constable = "Byron Armand"
