@@ -37,6 +37,7 @@ const forms = defineCollection({
     title: text,
     purpose: text,
     revised: z.coerce.date(),
+    office: z.boolean().default(false),
   }),
 });
 

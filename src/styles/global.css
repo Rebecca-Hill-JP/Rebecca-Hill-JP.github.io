@@ -603,6 +603,16 @@ td.amount {
   margin-bottom: 0.75rem;
 }
 
+.office-forms summary {
+  padding-block: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.office-forms[open] summary {
+  margin-bottom: var(--space);
+}
+
 .statutes {
   font-size: var(--size-small);
 }
