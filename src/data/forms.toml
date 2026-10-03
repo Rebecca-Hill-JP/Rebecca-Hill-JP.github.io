@@ -90,7 +90,7 @@ revised = 2026-10-02
 office = true
 
 [eviction-rule]
-order = 14
+order = 15
 title = "Rule to Show Cause: Eviction"
 purpose = "Tells a tenant or occupant they have been sued for eviction and when to appear in court, with the constable's record of delivery."
 revised = 2026-10-02
@@ -100,5 +100,19 @@ office = true
 order = 11
 title = "Default Judgment"
 purpose = "The court's judgment for the plaintiff when the defendant was cited and did not appear or answer."
+revised = 2026-10-02
+office = true
+
+[citation-return]
+order = 14
+title = "Constable's Return: Citation"
+purpose = "The constable's record of how a citation was served, or why it was not."
+revised = 2026-10-02
+office = true
+
+[eviction-return]
+order = 16
+title = "Constable's Return: Eviction"
+purpose = "The constable's record of when and how the eviction rule to show cause was delivered."
 revised = 2026-10-02
 office = true

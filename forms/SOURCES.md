@@ -336,10 +336,42 @@ been sued for eviction".
 | Why judgment should not issue and the plaintiff not get possession within 24 hours | same                              | art. 4732                                                  |
 | Default judgment warning; "let the above rule show cause"                          | same                              | art. 4732                                                  |
 | "Witness my hand"; Justice of the Peace signs                                      | same                              |                                                            |
-| Constable: date delivered; personal, domiciliary, or posted on the door            | same                              |                                                            |
+
+AG 44 prints the constable's section under the order. The office uses a
+separate return, so it is its own form, below.
+
+## Constable's Return: Eviction (`eviction-return.typ`)
+
+Baseline: the constable's section of AG 44, "Constable Section: Verifying
+method of delivery". An office form, on letterhead, with the caption so it
+stands alone.
+
+| Our field                                                    | AG 44 constable section           |
+| ------------------------------------------------------------ | --------------------------------- |
+| Caption, Case No.                                            | none (under the order)            |
+| Certify delivery of the rule on a date, by the method marked | same                              |
+| Personal: name of defendant served                           | same                              |
+| Domiciliary: name of person served                           | same                              |
+| Posted on the door, date                                     | same                              |
+| Constable signs                                              | Constable, Ward, District, Parish |
+
+## Constable's Return: Citation (`citation-return.typ`)
+
+Baseline: AG 07 "Constable's Return Section". An office form, on letterhead,
+at 11 point so it fits one page.
+
+| Our field                                                                                                                              | AG 07                                                 |
+| -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| Caption, Case No.                                                                                                                      | none                                                  |
+| Date the citation or other process and certified copy of the petition were received                                                    | same, repeated in each section; asked once here       |
+| Personal: date, place, parish                                                                                                          | same                                                  |
+| Domiciliary: date, dwelling or usual abode, parish, person of suitable age and discretion residing there, defendant temporarily absent | same                                                  |
+| Certified mail, return receipt: date mailed, address, date receipt received, signed by, dated                                          | same                                                  |
+| Due diligence: not served, date, reasons                                                                                               | same                                                  |
+| Constable signs                                                                                                                        | Constable, Justice of the Peace Court, Ward, District |
 
 ## Court papers not published
 
-Other judgments, the warrant for possession, and the constable's returns are
-issued by the court and are not on the site. The Attorney General baseline has
-them as forms 07, 11, 15, and 45 to 48.
+Other judgments and the warrant for possession, with its return, are issued by
+the court and are not on the site. The Attorney General baseline has them as
+forms 11, 15, and 45 to 48.
