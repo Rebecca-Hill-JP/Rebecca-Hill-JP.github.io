@@ -287,9 +287,22 @@ Favor of Defendant". Office forms, on letterhead.
 | "Judgment read, rendered, and signed in open court" on a date                        | same                                         |
 | Justice of the Peace signs                                                           | Justice of the Peace, Ward, District, Parish |
 
-As in the samples, both assume both parties appeared. A default judgment
-(AG 12) and a judgment for the defendant with no reconventional demand are
-not covered. "District" is left out, as on the other captions.
+As in the samples, both assume both parties appeared; a default judgment is
+its own form, below. A judgment for the defendant with no reconventional
+demand is not covered. "District" is left out, as on the other captions.
+
+## Default Judgment (`default-judgment.typ`)
+
+Baseline: AG 12 "Default Judgment". An office form, on letterhead.
+
+| Our field                                                                                | AG 12                                        | Law                         |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------- |
+| Caption, Case No.                                                                        | caption; Ward, District, Parish              |                             |
+| Trial as assigned; defendant cited and failed to appear or answer within the legal delay | same                                         | art. 4921, default judgment |
+| "Ordered, adjudged, and decreed": judgment for the plaintiff against the defendant       | same                                         |                             |
+| Sum in words and figures; interest percent from a date until paid; court costs           | same                                         |                             |
+| "Thus done and signed" at a place, Louisiana, on a date                                  | same                                         |                             |
+| Justice of the Peace signs                                                               | Justice of the Peace, Ward, District, Parish |                             |
 
 ## Citation (`citation.typ`)
 
@@ -329,4 +342,4 @@ been sued for eviction".
 
 Other judgments, the warrant for possession, and the constable's returns are
 issued by the court and are not on the site. The Attorney General baseline has
-them as forms 07, 11, 12, 15, and 45 to 48.
+them as forms 07, 11, 15, and 45 to 48.
