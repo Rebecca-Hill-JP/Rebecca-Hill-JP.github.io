@@ -37,6 +37,29 @@ phrases = [
   "Without them all proceedings are absolutely null",
 ]
 
+[111154]
+cite = "C.C.P. art. 1232"
+phrases = ["tenders the citation or other process to the person to be served"]
+
+[111156]
+cite = "C.C.P. art. 1234"
+phrases = [
+  "dwelling house or usual place of abode",
+  "person of suitable age and discretion residing in the domiciliary establishment",
+]
+
+[111162]
+cite = "C.C.P. art. 1261"
+phrases = [
+  "domestic or foreign corporation is made by personal service on any one of its agents for service of process",
+]
+
+[111167]
+cite = "C.C.P. art. 1266"
+phrases = [
+  "limited liability company is made by personal service on any one of its agents for service of process",
+]
+
 [111929]
 cite = "C.C.P. art. 42"
 phrases = ["parish of his domicile", "where its registered office is located"]

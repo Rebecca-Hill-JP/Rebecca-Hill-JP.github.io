@@ -144,7 +144,8 @@
 
 // `from-court: false` is for papers a party gives to another party. They must not
 // look as if the court issued them, so they carry no letterhead.
-#let form(id: none, from-court: true, body) = {
+// `instructions` become a first page the filer keeps; the pages filed are numbered from 1 after it.
+#let form(id: none, from-court: true, instructions: none, body) = {
   let entry = catalog.at(id)
   let revised = entry.revised.display("[month repr:long] [day padding:none], [year]")
   set document(title: entry.title + ", " + court, author: court)
@@ -161,7 +162,11 @@
       #v(-0.5em)
       #entry.title · Revised #revised
       #h(1fr)
-      Page #counter(page).display() of #counter(page).final().first() \
+      #if instructions != none and here().page() == 1 [
+        Instructions: keep this page
+      ] else [
+        Page #counter(page).display() of #counter(page).final().first()
+      ] \
       #if from-court [
         #court, #venue. Court staff cannot give legal advice.
       ] else [
@@ -180,6 +185,13 @@
     #v(-0.75em)
     #pdf.artifact(line(length: 100%, stroke: 1.2pt + GOLD))
   ]
+  if instructions != none {
+    if from-court { letterhead }
+    heading(level: 1)[How to fill out the #entry.title]
+    instructions
+    pagebreak()
+    counter(page).update(1)
+  }
   if from-court { letterhead }
   heading(level: 1, entry.title)
   body

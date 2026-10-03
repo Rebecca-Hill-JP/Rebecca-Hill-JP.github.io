@@ -60,6 +60,28 @@ Left out on purpose:
   this court has a district or division name to print in the caption is an
   open question for the office.
 
+### Instruction page
+
+The first page, kept by the filer, follows MAN's "Instructions for Filing
+Suit" in purpose but not in wording. Each legal statement rests on the article
+it cites: service at home or in person (arts. 1232, 1234), service on a
+corporation or limited liability company through its registered agent
+(arts. 1261, 1266), the $5,000 limit (art. 4911), and costs paid in advance
+(arts. 5181 to 5188). Fees, payment, and how to file come from `site.toml` and
+the small claims page, so the form cannot disagree with the website.
+
+Left out of MAN's instructions on purpose:
+
+- "The Statute of Limitation for Filing a Civil Suit (Small Claims) is one year
+  from the date of the last activity on the account." No single period applies
+  to small claims; it depends on the kind of claim, and none of the periods was
+  checked.
+- Office rules of that court: two copies of each document, no documents accepted
+  after filing, $50 for each extra service address, waiting four weeks before
+  calling. This office has not said it has such rules.
+- The 15-day appeal and that either side may have a lawyer. Both are on the
+  website; neither helps fill out the form.
+
 ## Defendant's Answer (`answer.typ`)
 
 Baselines: AG 09 "Defendant's Answer"; AG 08 "Instructions for Defendant's Answer". MAN has no answer form.

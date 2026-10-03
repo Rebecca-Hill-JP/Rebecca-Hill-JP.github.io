@@ -1,5 +1,42 @@
 #import "letterhead.typ": *
-#show: form.with(id: "civil-claim")
+
+// The fees are those the website lists, read from the page's front matter.
+#let small-claims = yaml(bytes(read("/src/content/services/small-claims.md").split("---").at(1)))
+
+#let instructions = [
+  #set text(size: 11pt)
+  #set par(spacing: 1em)
+
+  Read this page before you start. Keep it; file only the pages that follow.
+
+  == The defendant
+
+  *Name.* Give the full name of each person you sue. For a business, give its exact legal name. Corporations and limited liability companies are listed in the Louisiana Secretary of State's business search at sos.la.gov.
+
+  *Address.* The court's papers are served on the defendant at the address you give. A home address is best: if the defendant is out, the papers may be left with a person of suitable age and discretion who lives there. At any other address, such as a workplace, they must be handed to the defendant. C.C.P. arts. 1232 and 1234.
+
+  *A corporation or limited liability company* is served through its registered agent for service of process. Give the agent's name and address from the Secretary of State's listing. C.C.P. arts. 1261 and 1266.
+
+  == The claim
+
+  *Amount.* Write it in words and in figures. Mark interest, court costs, or attorney fees only if you claim them; they do not count toward the \$5,000 limit. C.C.P. art. 4911.
+
+  *What happened.* In your own words: who did what, when, and how you worked out the amount. Describe any note, contract, lease, or invoice. For a claim to property, describe the property and give its value.
+
+  *Attachments.* Attach one copy of each paper that supports your claim. Keep the originals and bring them to the trial. For an open account, attach a statement of the account sworn before a notary. For a returned check, attach your written demand for payment and its certified mail receipt.
+
+  == Sign and file
+
+  Sign, date, and print your name. Your signature affirms that the facts and papers are true.
+
+  #office.how_to_file Telephone #office.phone.
+
+  *Fees.* #small-claims.fees.filter(fee => fee.amount.starts-with("$")).map(fee => [#fee.item: #fee.amount.]).join(" ") Pay by #office.payment_methods; make checks payable to #office.payable_to. If you cannot afford the costs, ask the office about going forward without paying in advance. C.C.P. arts. 5181 through 5188.
+
+  A judgment says who owes what; it does not collect the money.
+]
+
+#show: form.with(id: "civil-claim", instructions: instructions)
 
 #caption()
 
