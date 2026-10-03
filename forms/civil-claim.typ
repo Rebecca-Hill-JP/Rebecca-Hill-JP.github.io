@@ -16,6 +16,7 @@
 #field[Full name]
 
 #field[Address where the defendant can be served]
+#lines(1)
 
 #grid(columns: (1fr, 1fr), field[Telephone], field[Email, if known])
 
