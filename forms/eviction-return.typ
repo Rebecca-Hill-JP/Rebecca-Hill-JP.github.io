@@ -3,7 +3,7 @@
 
 #caption(first: "Plaintiff(s): landlord or owner", second: "Defendant(s): tenant or occupant")
 
-I certify that I delivered the rule to show cause in this case on (date) #blank(width: 9em) by the method marked below.
+I certify that I delivered the petition of eviction and the rule to show cause in this case on (date) #blank(width: 9em) by the method marked below.
 
 #item(field[Personal: name of defendant served])
 

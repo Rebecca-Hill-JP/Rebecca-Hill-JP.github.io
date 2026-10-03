@@ -346,14 +346,14 @@ Baseline: the constable's section of AG 44, "Constable Section: Verifying
 method of delivery". An office form, on letterhead, with the caption so it
 stands alone.
 
-| Our field                                                    | AG 44 constable section           |
-| ------------------------------------------------------------ | --------------------------------- |
-| Caption, Case No.                                            | none (under the order)            |
-| Certify delivery of the rule on a date, by the method marked | same                              |
-| Personal: name of defendant served                           | same                              |
-| Domiciliary: name of person served                           | same                              |
-| Posted on the door, date                                     | same                              |
-| Constable signs                                              | Constable, Ward, District, Parish |
+| Our field                                                                                                                                      | AG 44 constable section           |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| Caption, Case No.                                                                                                                              | none (under the order)            |
+| Certify delivery of the petition and the rule on a date, by the method marked (the office serves them together; AG 44 says "said court order") | same                              |
+| Personal: name of defendant served                                                                                                             | same                              |
+| Domiciliary: name of person served                                                                                                             | same                              |
+| Posted on the door, date                                                                                                                       | same                              |
+| Constable signs                                                                                                                                | Constable, Ward, District, Parish |
 
 ## Constable's Return: Citation (`citation-return.typ`)
 

@@ -113,6 +113,6 @@ office = true
 [eviction-return]
 order = 16
 title = "Constable's Return: Eviction"
-purpose = "The constable's record of when and how the eviction rule to show cause was delivered."
+purpose = "The constable's record of when and how the petition of eviction and rule to show cause were delivered."
 revised = 2026-10-02
 office = true
