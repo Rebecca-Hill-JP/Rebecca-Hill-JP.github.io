@@ -60,3 +60,24 @@ title = "Waiver of Birth Certificate"
 purpose = "Ask the court to order that a marriage license be issued when no birth certificate is on file for an applicant born in the United States."
 revised = 2026-10-02
 office = true
+
+[bill-of-sale]
+order = 9
+title = "Bill of Sale"
+purpose = "A seller transfers a vehicle or other movable property to a buyer, signed before the Justice of the Peace with two witnesses."
+revised = 2026-10-02
+office = true
+
+[plaintiff-judgment]
+order = 10
+title = "Judgment in Favor of Plaintiff"
+purpose = "The court's judgment for the plaintiff after a trial both parties attended."
+revised = 2026-10-02
+office = true
+
+[defendant-judgment]
+order = 11
+title = "Judgment in Favor of Defendant"
+purpose = "The court's judgment for the defendant on a reconventional demand after a trial both parties attended."
+revised = 2026-10-02
+office = true

@@ -249,8 +249,49 @@ says adversarial proceedings "must be against the owner of record". If those
 hold, a judgment without a served defendant could later be attacked as null.
 The office chose the sample (2026-10-02).
 
+## Bill of Sale (`bill-of-sale.typ`)
+
+Baseline: AG 61 "Bill of Sale". An office form: the parties sign before the
+Justice of the Peace as ex officio notary. No letterhead, because the act is
+the parties', not the court's.
+
+| Our field                                                       | AG 61 |
+| --------------------------------------------------------------- | ----- |
+| State of Louisiana; parish; date                                | same  |
+| "Before me ... personally came and appeared": seller            | same  |
+| Sells "with full warranty of title" to the buyer, both of age   | same  |
+| Serial number (VIN); make and model; year                       | same  |
+| Price in words and figures, cash, receipt acknowledged          | same  |
+| Seller warrants no mortgages, liens, or encumbrances            | same  |
+| Two witnesses; seller and buyer sign                            | same  |
+| "Sworn to and subscribed before me"; Justice of the Peace signs | same  |
+
+Concern on record: an ex officio notary may not draft documents
+(R.S. 13:2586.1). Whether completing a printed bill of sale for the parties
+is drafting is the office's call; the office uses this form.
+
+## Judgment in Favor of Plaintiff (`plaintiff-judgment.typ`) and Defendant (`defendant-judgment.typ`)
+
+Baselines: AG 13 "Judgment In Favor of Plaintiff" and AG 14 "Judgment In
+Favor of Defendant". Office forms, on letterhead.
+
+| Our field                                                                            | AG 13 / 14                                   |
+| ------------------------------------------------------------------------------------ | -------------------------------------------- |
+| Caption, Case No.                                                                    | caption; Ward, District, Parish              |
+| Trial as assigned, both parties appeared                                             | same                                         |
+| 13: plaintiff proved the demand                                                      | same                                         |
+| 14: plaintiff failed to prove the demand; defendant proved the reconventional demand | same                                         |
+| "Ordered, adjudged, and decreed": judgment for one party against the other           | same                                         |
+| Sum in words and figures; interest percent from a date until paid; court costs       | same                                         |
+| "Judgment read, rendered, and signed in open court" on a date                        | same                                         |
+| Justice of the Peace signs                                                           | Justice of the Peace, Ward, District, Parish |
+
+As in the samples, both assume both parties appeared. A default judgment
+(AG 12) and a judgment for the defendant with no reconventional demand are
+not covered. "District" is left out, as on the other captions.
+
 ## Court papers not published
 
 Citation, other judgments, order to show cause, warrant for possession, and
-returns are issued by the court and are not on the site. The Attorney General baseline
-has them as forms 05, 07, 11 to 15, and 44 to 48.
+returns are issued by the court and are not on the site. The Attorney General
+baseline has them as forms 05, 07, 11, 12, 15, and 44 to 48.
