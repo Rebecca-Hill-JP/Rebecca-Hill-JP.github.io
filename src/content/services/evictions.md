@@ -81,4 +81,4 @@ The court cannot hear the case if the dispute is about who owns the property, or
 - **Bring your evidence:** the lease, rent receipts, messages, and photographs.
 - **An appeal does not stop the eviction** unless you answered under oath with a defense that entitles you to stay, and you ask for the appeal and file the appeal bond within 24 hours of the judgment. The court sets the amount of the bond.
 
-Court staff cannot advise you. If you need advice, speak to a lawyer or a legal aid office.
+The court cannot advise you. If you need advice, speak to a lawyer or a legal aid office.

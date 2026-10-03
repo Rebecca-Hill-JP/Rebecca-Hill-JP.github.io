@@ -168,7 +168,7 @@
         Page #counter(page).display() of #counter(page).final().first()
       ] \
       #if from-court [
-        #court, #venue. Court staff cannot give legal advice.
+        #court, #venue. The court cannot give legal advice.
       ] else [
         Blank form from the #court, #venue. Not issued by the court.
       ]
