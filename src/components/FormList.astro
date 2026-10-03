@@ -18,7 +18,12 @@ const long_date = new Intl.DateTimeFormat("en-US", {
     <li>
       <h3>{data.title}</h3>
       <p>{data.purpose}</p>
-      <a class="button" href={href(`/forms/${id}.pdf`)}>
+      <a
+        class="button"
+        href={href(`/forms/${id}.pdf`)}
+        target="_blank"
+        rel="noopener"
+      >
         Open {data.title} (PDF)
       </a>
       <span class="note">Revised {long_date.format(data.revised)}</span>
